@@ -1,3 +1,9 @@
+.load{
+    height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .pacman {
     width: 100px;
     height: 100px;
@@ -5,7 +11,9 @@
     background: #FFF01F;
     position: relative;
     margin-top: 20px;
-    
+    /* display: flex;
+    justify-content: center; */
+    align-items: center;
   }
 
   .pacman__mouth {

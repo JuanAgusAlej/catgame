@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import Loading from "./components/Loading";
+
+import "./style/style.css";
 
 const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+  return <Loading></Loading>;
+};
 
-export default App
+export default App;
