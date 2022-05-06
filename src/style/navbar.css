@@ -8,6 +8,7 @@
   }
   
   .nav-item{
+    cursor: pointer;
     transition: transform 0.2s;
   }
 
