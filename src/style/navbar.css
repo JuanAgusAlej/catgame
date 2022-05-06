@@ -1,6 +1,8 @@
 .navbar{
     background-color: #155AF6;
     color: white;
+    position: sticky;
+    top: 0;
     text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #FF3270, 0 0 0.5em #FF3270, 0 0 0.1em #FF3270, 0 10px 3px #000;
     font-family:'Courier New', Courier ;
   }
