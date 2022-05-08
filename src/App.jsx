@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import AboutUsCard from "./components/AboutUsCard";
 
 const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+	return (
+		<div>
+			<div className="container">
+				<div className="row mt-5 justify-content-center">
+					<AboutUsCard />
+				</div>
+			</div>
+		</div>
+	);
+};
 
-export default App
+export default App;
