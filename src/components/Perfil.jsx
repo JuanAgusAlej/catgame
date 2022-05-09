@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import Perfil_Info from "./Perfil_Info";
+import Perfil_Publish from "./Perfil_Publish";
 import cat1 from "../img/cat1.png";
 
 const Perfil = () => {
+	const [informacion, setInformacion] = useState(true);
+
+	const mostrarInformacion = () => {
+		setInformacion(true);
+	};
+	const mostrarPublicaciones = () => {
+		setInformacion(false);
+	};
+
+	let activeStyle = {
+		textDecoration: "underline",
+		fontWeight: "bold",
+	};
+
 	return (
 		<div className="container mt-5">
 			<div className="row">
@@ -37,15 +53,27 @@ const Perfil = () => {
 			</div>
 			<div className="row justify-content-center">
 				<div className="col-6 col-md-6 col-lg-3 text-center">
-					<button className="btn btn-outline-primary">Información</button>
+					<button
+						className="btn btn-outline-primary"
+						onClick={mostrarInformacion}
+						style={informacion ? activeStyle : undefined}
+					>
+						Información
+					</button>
 				</div>
 				<div className="col-6 col-md-6 col-lg-3 text-center">
-					<button className="btn btn-outline-success">Publicaciones</button>
+					<button
+						className="btn btn-outline-success"
+						onClick={mostrarPublicaciones}
+						style={informacion ? undefined : activeStyle}
+					>
+						Publicaciones
+					</button>
 				</div>
 			</div>
 			<div className="row">
 				<div className="col">
-					<p>contenido</p>
+					{informacion ? <Perfil_Info /> : <Perfil_Publish />}
 				</div>
 			</div>
 		</div>
