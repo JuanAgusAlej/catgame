@@ -1,4 +1,9 @@
 // datos hard codeados para hacer una prueba de la vista.
+import cat1 from "../img/cat1.png";
+import cat2 from "../img/cat2.png";
+import cat3 from "../img/cat3.png";
+import cat4 from "../img/cat4.png";
+import cat5 from "../img/cat5.png";
 
 export const nosotros = [
 	{
@@ -6,7 +11,7 @@ export const nosotros = [
 		email: "prueba1@prueba.com",
 		first_name: "Juan",
 		last_name: "Alejandro",
-		avatar: "https://reqres.in/img/faces/7-image.jpg",
+		avatar: cat1,
 		skill: "backend developer",
 		description: "texto de prueba",
 	},
@@ -16,7 +21,7 @@ export const nosotros = [
 		email: "prueba1@prueba.com",
 		first_name: "Miqueas",
 		last_name: "Acevedo",
-		avatar: "https://reqres.in/img/faces/7-image.jpg",
+		avatar: cat2,
 		skill: "backend developer",
 		description: "texto de prueba",
 	},
@@ -25,7 +30,7 @@ export const nosotros = [
 		email: "prueba2@prueba.com",
 		first_name: "Cecy",
 		last_name: "Dip",
-		avatar: "https://reqres.in/img/faces/7-image.jpg",
+		avatar: cat3,
 		skill: "Frontend Developer",
 		description: "texto de prueba",
 	},
@@ -34,7 +39,7 @@ export const nosotros = [
 		email: "prueba1@prueba.com",
 		first_name: "Mauro",
 		last_name: "Soto",
-		avatar: "https://reqres.in/img/faces/7-image.jpg",
+		avatar: cat5,
 		skill: "Frontend Devoloper",
 		description: "texto de prueba",
 	},
@@ -43,7 +48,7 @@ export const nosotros = [
 		email: "prueba1@prueba.com",
 		first_name: "Rober",
 		last_name: "Ousset",
-		avatar: "https://reqres.in/img/faces/7-image.jpg",
+		avatar: cat4,
 		skill: "Frontend Devoloper",
 		description: "texto de prueba",
 	},
