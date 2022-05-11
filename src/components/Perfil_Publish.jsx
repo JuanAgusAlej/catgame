@@ -3,10 +3,9 @@ import React from "react";
 const Perfil_Publish = () => {
 	return (
 		<div className="container">
-			<div className="row">
+			<div className="row mt-5">
 				<div className="col">
-					<ul>Name: </ul>
-					<ul>Name: </ul>
+					<ul>Card Ceci para renderizar</ul>
 				</div>
 			</div>
 		</div>
