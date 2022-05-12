@@ -13,6 +13,8 @@ export const nosotros = [
 		last_name: "Alejandro",
 		avatar: cat1,
 		skill: "backend developer",
+		linkedIn: "User LinkedIn",
+		gitUser: "Git User Name",
 		description: "texto de prueba",
 	},
 
@@ -23,6 +25,8 @@ export const nosotros = [
 		last_name: "Acevedo",
 		avatar: cat2,
 		skill: "backend developer",
+		linkedIn: "User LinkedIn",
+		gitUser: "Git User Name",
 		description: "texto de prueba",
 	},
 	{
@@ -32,6 +36,8 @@ export const nosotros = [
 		last_name: "Dip",
 		avatar: cat3,
 		skill: "Frontend Developer",
+		linkedIn: "User LinkedIn",
+		gitUser: "Git User Name",
 		description: "texto de prueba",
 	},
 	{
@@ -41,6 +47,8 @@ export const nosotros = [
 		last_name: "Soto",
 		avatar: cat5,
 		skill: "Frontend Devoloper",
+		linkedIn: "User LinkedIn",
+		gitUser: "Git User Name",
 		description: "texto de prueba",
 	},
 	{
@@ -50,6 +58,8 @@ export const nosotros = [
 		last_name: "Ousset",
 		avatar: cat4,
 		skill: "Frontend Devoloper",
+		linkedIn: "User LinkedIn",
+		gitUser: "Git User Name",
 		description: "texto de prueba",
 	},
 ];

@@ -26,13 +26,15 @@ const AboutUsCard = () => {
 
 	return (
 		<React.Fragment>
-			<h1 className="fs-1 fst-italic text-center mb-5">About Us</h1>
+			<h1 className="fs-1 fst-italic text-center mb-5 border rounded-pill border-warning border-3">
+				About Us
+			</h1>
 			{nosotros.map((nosotros, index) => (
-				<div key={index} className="col-12 col-md-4 col-lg-2 mx-2">
-					<div className="card mb-3 w-150">
+				<div key={index} className="col-12 col-md-4 col-lg-2 mx-2 mt-2">
+					<div className="card mb-3 w-100 h-100">
 						<img
 							src={nosotros.avatar}
-							className="card-img-top redondo"
+							className="card-img-top rounded mx-auto d-block  redondo card-avatar-about"
 							alt=""
 						/>
 						<div className="card-body text-center">
@@ -40,16 +42,24 @@ const AboutUsCard = () => {
 								{nosotros.first_name} {nosotros.last_name}
 							</p>
 							<p className="card-text fs-6 fw-lighter">{nosotros.email}</p>
-							<p className="badge bg-warning text-dark text-wrap">
+							<p
+								className={
+									nosotros.skill === "backend developer"
+										? "badge bg-success text-wrap"
+										: "badge bg-warning text-black text-wrap"
+								}
+							>
 								{nosotros.skill}
 							</p>
+							<p className="fs-6 fw-lighter">{nosotros.linkedIn}</p>
+							<p className="fs-6">{nosotros.gitUser}</p>
 							<div className="row text-center">
 								<div className="col">
 									<button
 										className="btn btn-info text-light btn-sm"
 										onClick={() => setShow(!show)}
 									>
-										Conoce más...
+										More info
 									</button>
 									{show && <p> {nosotros.description} </p>}
 								</div>
