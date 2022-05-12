@@ -14,12 +14,15 @@ const ProfileCard = () => {
         <div className="card-body">
           <h5 className="card-title text-center">DisplayName</h5>
           <p className="text-muted text-center">@username</p>
-          <div className="text-center">
-            <Button className="postBox__postButton">Profile</Button>
-          </div>
-          <div className="text-center">
-            <Button className="postBox__postButton">Meow</Button>
-          </div>
+        </div>
+
+        <div className="text-center">
+          <button className=" btn postBox__postButton text-uppercase my-2">
+            Profile
+          </button>
+          <button className=" btn postBox__postButton text-uppercase my-4">
+            Meow
+          </button>
         </div>
       </div>
     </div>

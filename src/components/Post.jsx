@@ -20,7 +20,7 @@ const Post = ({ displayName, username, text, image, avatar }) => {
               <h3>
                 <span>{displayName} DisplayName</span>
                 <span className="post__headerSpecial">
-                  {username} @username
+                  @ {username} username
                 </span>
               </h3>
             </div>
@@ -39,44 +39,12 @@ const Post = ({ displayName, username, text, image, avatar }) => {
             <div className="post__footer">
               <i className="bi bi-chat post__option"></i>
               <i className="bi bi-share post__option"></i>
-              <i className="bi bi-chat-square-heart post__option"></i>
+              <i className="bi bi-heart post__option"></i>
             </div>
           </div>
         </div>
       </div>
     </div>
-    //   ---------------------------------------------------
-    // <div className="post">
-    //   <div className="post__avatar">
-    //     <Avatar src="https://img.freepik.com/foto-gratis/gato-gracioso-gafas-sol-gato-gafas-pared-soleada-limpia-azul-claro-mascotas-divertidas-fiesta-vacaciones-viajes-concepto-verano_90380-2622.jpg?w=2000"></Avatar>
-    //   </div>
-    //   <div className="post__body">
-    //     <div className="post__header">
-    //       <div className="post__headerText">
-    //         <h3>
-    //           <span>{displayName} DisplayName</span>
-    //           <span className="post__headerSpecial">{username} @username</span>
-    //         </h3>
-    //       </div>
-    //       <div className="post__headerDescription">
-    //         <p>
-    //           {text}Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    //           Quaerat placeat nisi incidunt pariatur ipsam doloremque deleniti
-    //           accusamus, suscipit blanditiis temporibus.
-    //         </p>
-    //       </div>
-    //       <img
-    //         src="https://media1.giphy.com/media/ICOgUNjpvO0PC/giphy.gif?cid=ecf05e47um1sc1svv5iwa80qlk9nhgfe7viyt2qbrwc8xhme&rid=giphy.gif&ct=g"
-    //         alt=""
-    //       />
-    //       <div className="post__footer">
-    //         <i className="bi bi-chat"></i>
-    //         <i className="bi bi-share"></i>
-    //         <i className="bi bi-chat-square-heart"></i>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 

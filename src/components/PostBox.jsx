@@ -43,31 +43,18 @@ const PostBox = () => {
             placeholder="Optional: Enter image URL"
             type="text"
           />
-          <Button
-            onClick={sendPost}
-            type="submit"
-            className="postBox__postButton"
-          >
-            Meow
-          </Button>
+          <div className="text-end">
+            <button
+              onClick={sendPost}
+              type="submit"
+              className=" btn postBox__postButton text-uppercase"
+            >
+              Meow
+            </button>
+          </div>
         </form>
       </div>
     </div>
-
-    // <div className="postBox">
-    //   <form>
-    //     <div className="postBox__input">
-    //       <Avatar src="https://previews.123rf.com/images/popaukropa/popaukropa1801/popaukropa180100049/92869259-cat-emoji-enojado-pet-avatar-emociones-malvadas-gatito-agresivo-ilustraci%C3%B3n-vectorial.jpg"></Avatar>
-    //       <input placeholder="Meow to the world" />
-    //     </div>
-    //     <input
-    //       className="postBox__inputImg"
-    //       placeholder="Optional: Enter image URL"
-    //       type="text"
-    //     />
-    //     <Button className="postBox__postButton">Meow</Button>
-    //   </form>
-    // </div>
   );
 };
 
