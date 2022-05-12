@@ -66,23 +66,19 @@ const Perfil = () => {
 								<div class="card">
 									<img src={cat1} class="card-img-top" alt="..." />
 									<div className="card-body">
-										<h5 className="card-title">Card title</h5>
-										<p className="card-text">
-											Some quick example text to build on the card title and
-											make up the bulk of the card's content.
+										<h5 className="card-title text-center">'User Name'</h5>
+										<p className="card-text text-center text-muted">
+											'User Email'
 										</p>
 									</div>
-									<ul className="list-group list-group-flush">
-										<li className="list-group-item">An item</li>
-										<li className="list-group-item">A second item</li>
-										<li className="list-group-item">A third item</li>
+									<ul className="list-group list-group-flush text-center">
+										<li className="list-group-item">Age:'x'</li>
+										<li className="list-group-item">Sex:'Male'</li>
+										<li className="list-group-item">Member since: ''</li>
 									</ul>
-									<div className="card-body">
+									<div className="card-body text-center">
 										<a href="#" className="card-link">
-											Card link
-										</a>
-										<a href="#" className="card-link">
-											Another link
+											User Setting
 										</a>
 									</div>
 								</div>

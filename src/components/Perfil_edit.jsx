@@ -1,13 +1,25 @@
 import React from "react";
+import cat1 from "../img/cat1.png";
+import "../style/avatar.css";
 
 const Perfil_edit = () => {
 	return (
 		<div className="container mt-5">
-			<div className="row">
-				<div className="col-12 col-md-6 col-lg-4">
+			<div className="row mt-3 text-center">
+				<div className="col">
+					<h2>User Configuration</h2>
+				</div>
+			</div>
+
+			<div className="row mt-5">
+				<div className="col-12 col-md-6 col-lg-4 offset-md-2">
 					<div class="card mb-3">
-						<img src={Cat1} class="img-fluid h-100" alt="..." />
-						<div className="card-body">
+						<img
+							src={cat1}
+							class="rounded mx-auto d-block img-avatar"
+							alt="..."
+						/>
+						<div className="card-body text-center">
 							<h5 className="card-title">Name</h5>
 							<p className="card-text">Select your Avatar here</p>
 							<p className="card-text">
@@ -20,7 +32,7 @@ const Perfil_edit = () => {
 					<form>
 						<div className="mb-3">
 							<label for="exampleInputEmail1" class="form-label">
-								Name
+								User Name
 							</label>
 							<input
 								type="text"
@@ -28,9 +40,6 @@ const Perfil_edit = () => {
 								id=""
 								aria-describedby=""
 							/>
-							<div id="emailHelp" class="form-text">
-								We'll never share your email with anyone else.
-							</div>
 						</div>
 						<div className="mb-3">
 							<label for="" class="form-label">
@@ -70,7 +79,16 @@ const Perfil_edit = () => {
 								id="exampleInputPassword1"
 							/>
 						</div>
-
+						<div className="mb-3">
+							<label for="exampleInputPassword1" class="form-label">
+								Password Confirmation
+							</label>
+							<input
+								type="password"
+								class="form-control"
+								id="exampleInputPassword1"
+							/>
+						</div>
 						<button type="submit" class="btn btn-success">
 							Save
 						</button>
