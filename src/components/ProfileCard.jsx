@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "@mui/material";
 
 import "../style/profilecard.css";
 const ProfileCard = () => {
@@ -17,7 +16,7 @@ const ProfileCard = () => {
         </div>
 
         <div className="text-center">
-          <button className=" btn postBox__postButton text-uppercase my-2">
+          <button className=" btn postBox__postButton text-uppercase my-4">
             Profile
           </button>
           <button className=" btn postBox__postButton text-uppercase my-4">

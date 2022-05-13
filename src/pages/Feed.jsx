@@ -17,7 +17,7 @@ const Feed = () => {
   return (
     <div className="container d-flex feed">
       <div className="row">
-        <div className="col-md-8">
+        <div className="col-md-8 col-sm-12">
           <PostBox />
           <Post />
           <Post />
@@ -36,7 +36,7 @@ const Feed = () => {
           />
         ))} */}
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4 d-none d-sm-none d-md-block">
           <ProfileCard />
         </div>
       </div>

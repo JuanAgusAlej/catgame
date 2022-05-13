@@ -17,8 +17,12 @@
     border-radius: 20px;
   }
   
-  
-  
+.avatar__img{
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+
   .post__headerDescription {
     margin-bottom: 10px;
     font-size: 15px;
