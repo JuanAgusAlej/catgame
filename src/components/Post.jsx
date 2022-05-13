@@ -7,7 +7,7 @@ const Post = ({ displayName, username, text, image, avatar }) => {
   return (
     <div className="card post mb-3">
       <div className="row g-0 ">
-        <div className="col-md-2 post__avatar">
+        <div className="col-sm-2 post__avatar">
           <img
             //   {avatar}
             src="https://i.pinimg.com/564x/ba/92/7f/ba927ff34cd961ce2c184d47e8ead9f6.jpg"

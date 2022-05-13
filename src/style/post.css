@@ -17,11 +17,11 @@
     border-radius: 20px;
   }
   
-.avatar__img{
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-}
+  .avatar__img{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+  }
 
   .post__headerDescription {
     margin-bottom: 10px;
@@ -53,17 +53,14 @@
     }
     
   .post__option{
-      /* display: flex;
-      align-items: center; */
       cursor: pointer;
       padding: 5px;
+      transition: transform 0.2s;
+
     }
     
     .post__option:hover {
-      
-      background-color:rgba(255,50,112,0.5);
-      border-radius: 30px;
-      color: #FFF;
-      transition: color 100ms ease-out;
+      color:rgba(255,50,112);
+      transform: scale(1.3);
     }
   

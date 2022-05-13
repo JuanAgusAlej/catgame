@@ -19,6 +19,8 @@ const ProfileCard = () => {
           <button className=" btn postBox__postButton text-uppercase my-4">
             Profile
           </button>
+        </div>
+        <div className="text-center">
           <button className=" btn postBox__postButton text-uppercase my-4">
             Meow
           </button>
