@@ -1,61 +1,60 @@
 import React from "react";
 import logo from "../img/logo.png";
+import { Link } from "react-router-dom";
+
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 import "../style/navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark d-flex">
       <div className="container gamercat-cont">
         {/* <Link to="/"> */}
         <div>
           <img
             src={logo}
             alt="GamerCat"
-            className="img-logo mx-2"
+            className="img-logo mx-2 d-none d-md-block d-sm-none"
             width="100px"
           />
         </div>
-        {/* </Link>  */}
-        <div className="logo-name mx-1">
+
+        <div className="logo-name mx-1 d-none d-md-block d-sm-none">
           <b>
             G<span>am</span>er<span>C</span>at
           </b>
         </div>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div
-          className="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item m-4">
-              {/* <Link to="*"> */}
-              nav-item
-              {/* </Link> */}
-            </li>
-            <li className="nav-item m-4">
-              {/* <Link to="*">  */}
-              nav-item
-              {/* </Link>   */}
-            </li>
-            <li className="nav-item m-4">
-              {/* <Link to="*">  */}
-              nav-item
-              {/* </Link>  */}
-            </li>
-          </ul>
-        </div>
+        {/* </Link>  */}
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item m-4">
+            {/* <Link to="*"> */}
+            <i className="bi bi-house"></i>
+            {/* </Link> */}
+          </li>
+          <li className="nav-item m-4">
+            {/* <Link to="*"> */}
+            <i className="bi bi-person"></i>
+            {/* </Link> */}
+          </li>
+          <li className="nav-item m-4">
+            {/* <Link to="*"> */}
+            <i className="bi bi-bell"></i>
+            {/* </Link> */}
+          </li>
+          <li className="nav-item m-4">
+            {/* <Link to="*">  */}
+            <i className="bi bi-newspaper"></i>
+            {/* </Link>   */}
+          </li>
+          <li className="nav-item m-4">
+            {/* <Link to="*">  */}
+            <i className="bi bi-box-arrow-right"></i>
+            {/* </Link>  */}
+          </li>
+        </ul>
       </div>
+      {/* </div> */}
     </nav>
   );
 };

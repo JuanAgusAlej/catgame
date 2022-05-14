@@ -1,5 +1,5 @@
 .navbar{
-    background-color: #155AF6;
+    background-color: #270fff;
     color: white;
     position: sticky;
     top: 0;
@@ -7,23 +7,30 @@
     font-family:'Courier New', Courier ;
   }
   
+  .navbar-nav{
+    flex-direction: row !important;
+  }
+
   .nav-item{
+    font-size: large;
     cursor: pointer;
     transition: transform 0.2s;
   }
 
   .nav-item:hover{
-    transform: scale(1.1);
+    transform: scale(2.0);
   }
   
   .img-logo {
     width: 100px;
+    cursor: pointer;
   }
 
   .logo-name {
     text-align: start;
     font-size: 2rem;
     height: 65px;
+    cursor: pointer;
     letter-spacing: 5px;
   }
   
