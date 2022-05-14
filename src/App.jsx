@@ -1,14 +1,11 @@
 import React from "react";
 import AboutUsCard from "./components/AboutUsCard";
+import AboutUs from "./pages/AboutUs";
 
 const App = () => {
 	return (
 		<div>
-			<div className="container">
-				<div className="row mt-5 justify-content-center">
-					<AboutUsCard />
-				</div>
-			</div>
+			<AboutUs />
 		</div>
 	);
 };

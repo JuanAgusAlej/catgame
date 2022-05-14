@@ -22,13 +22,10 @@ const AboutUsCard = () => {
 
 	// creo estato de componente para poder mostrar en detalle de la persona de About Us al hacer click en Show
 
-	const [show, setShow] = useState(false);
+	// const [show, setShow] = useState(false);
 
 	return (
 		<React.Fragment>
-			<h1 className="fs-1 fst-italic text-center mb-5 border rounded-pill border-warning border-3">
-				About Us
-			</h1>
 			{nosotros.map((nosotros, index) => (
 				<div key={index} className="col-12 col-md-4 col-lg-2 mx-2 mt-2">
 					<div className="card mb-3 w-100 h-100">
@@ -53,7 +50,7 @@ const AboutUsCard = () => {
 							</p>
 							<p className="fs-6 fw-lighter">{nosotros.linkedIn}</p>
 							<p className="fs-6">{nosotros.gitUser}</p>
-							<div className="row text-center">
+							{/* <div className="row text-center">
 								<div className="col">
 									<button
 										className="btn btn-info text-light btn-sm"
@@ -63,7 +60,7 @@ const AboutUsCard = () => {
 									</button>
 									{show && <p> {nosotros.description} </p>}
 								</div>
-							</div>
+							</div> */}
 						</div>
 					</div>
 				</div>
