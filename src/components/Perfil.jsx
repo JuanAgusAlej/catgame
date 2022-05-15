@@ -64,7 +64,11 @@ const Perfil = () => {
 						<div className="row">
 							<div className="col">
 								<div class="card">
-									<img src={cat1} class="card-img-top" alt="..." />
+									<img
+										src={cat1}
+										class="card-img-top img-avatar mx-auto"
+										alt="..."
+									/>
 									<div className="card-body">
 										<h5 className="card-title text-center">'User Name'</h5>
 										<p className="card-text text-center text-muted">

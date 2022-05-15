@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import cat1 from "../img/cat1.png";
 import "../style/avatar.css";
+import ModalAvatar from "./Modal/ModalAvatar";
 
 const Perfil_edit = () => {
+	const [show, setShow] = useState(false);
+
+	const handleClose = () => setShow(false);
+	const handleShow = () => setShow(true);
+
 	return (
 		<div className="container mt-5">
 			<div className="row mt-3 text-center">
@@ -20,8 +26,10 @@ const Perfil_edit = () => {
 							alt="..."
 						/>
 						<div className="card-body text-center">
-							<h5 className="card-title">Name</h5>
-							<p className="card-text">Select your Avatar here</p>
+							<button className="btn btn-sm btn-primary" onClick={handleShow}>
+								Change Avatar
+							</button>
+							<h4 className="card-title mt-2">Name</h4>
 							<p className="card-text">
 								<small className="text-muted">Last updated 3 mins ago</small>
 							</p>
@@ -94,6 +102,9 @@ const Perfil_edit = () => {
 						</button>
 					</form>
 				</div>
+			</div>
+			<div className="d-flex justify-content-center">
+				<ModalAvatar show={show} handleClose={handleClose} />
 			</div>
 		</div>
 	);

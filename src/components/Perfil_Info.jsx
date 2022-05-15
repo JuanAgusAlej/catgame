@@ -9,11 +9,11 @@ const Perfil_Info = () => {
 					<ul className="list-group">
 						<li className="list-group-item d-flex justify-content-between align-items-center">
 							Post
-							<span class="badge bg-primary rounded-pill">14</span>
+							<span className="badge bg-primary rounded-pill">14</span>
 						</li>
 						<li className="list-group-item d-flex justify-content-between align-items-center">
 							Followers
-							<span class="badge bg-primary rounded-pill">2</span>
+							<span className="badge bg-primary rounded-pill">2</span>
 						</li>
 						<li className="list-group-item d-flex justify-content-between align-items-center">
 							Following

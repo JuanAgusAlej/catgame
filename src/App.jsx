@@ -1,17 +1,11 @@
 import React from "react";
-import AboutUsCard from "./components/AboutUsCard";
 import Perfil from "./components/Perfil";
+import Perfil_edit from "./components/Perfil_edit";
 
 const App = () => {
 	return (
 		<div>
-			{/* para montar componente de AboutUs */}
-			{/* <div className="container">
-				<div className="row mt-5 justify-content-center">
-					<AboutUsCard />
-				</div>
-			</div> */}
-			<Perfil />
+			<Perfil_edit />
 		</div>
 	);
 };

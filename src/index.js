@@ -9,6 +9,6 @@ import Perfil_edit from "./components/Perfil_edit";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
-		<Perfil_edit />
+		<App />
 	</React.StrictMode>
 );
