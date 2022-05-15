@@ -36,6 +36,7 @@ const PostBox = () => {
               value={postMessage}
               placeholder="Meow to the world"
               type="text"
+              maxLength={200}
             />
           </div>
           <input
