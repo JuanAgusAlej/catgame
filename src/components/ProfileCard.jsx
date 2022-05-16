@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "../style/profilecard.css";
+import Footer from "./Footer";
 const ProfileCard = () => {
   return (
     <div className="profile-card">
@@ -16,14 +18,21 @@ const ProfileCard = () => {
         </div>
 
         <div className="text-center">
+          {/* <Link to="/profile"> */}
           <button className=" btn postBox__postButton text-uppercase my-4">
             Profile
           </button>
+          {/* </Link>  */}
         </div>
         <div className="text-center">
+          {/* <Link to="/"> */}
           <button className=" btn postBox__postButton text-uppercase my-4">
             Meow
           </button>
+          {/* </Link>  */}
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
     </div>

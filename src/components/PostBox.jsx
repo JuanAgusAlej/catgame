@@ -11,7 +11,7 @@ const PostBox = () => {
 
     // nombrebasededatos.collection("posts").add({
     //   displayName: "Pablito",
-    //   username: "clavounclavito",
+    //   username: "clavo1clavito",
     //   text: postMessage,
     //   image: postImage,
     //  avatar:
