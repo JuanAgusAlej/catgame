@@ -13,8 +13,8 @@ const ModalAvatar = (props) => {
 				</Modal.Header>
 				<Modal.Body>
 					<div className="row mt-2">
-						{avatars.map((imagen) => (
-							<div className="col-12 col-md-4 col-lg-2 mt-2">
+						{avatars.map((imagen, index) => (
+							<div key={index} className="col-12 col-md-4 col-lg-2 mt-2">
 								<div className="card">
 									<img
 										src={imagen.avatarImg}

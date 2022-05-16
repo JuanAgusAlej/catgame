@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Perfil_Info from "./Perfil_Info";
 import Perfil_Publish from "./Perfil_Publish";
 import cat1 from "../img/cat1.png";
+import { Nav } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 const Perfil = () => {
 	const [informacion, setInformacion] = useState(true);
@@ -59,7 +61,7 @@ const Perfil = () => {
 						</div>
 					</div>
 				</div>
-				<div className="col-12 col-md-4 col-lg-4 d-none d-md-block d-lg-block">
+				<div className="col-12 col-md-4 col-lg-4">
 					<div className="container">
 						<div className="row">
 							<div className="col">
@@ -81,9 +83,9 @@ const Perfil = () => {
 										<li className="list-group-item">Member since: ''</li>
 									</ul>
 									<div className="card-body text-center">
-										<a href="#" className="card-link">
+										<NavLink to="/perfil/edit" className="nav-link">
 											User Setting
-										</a>
+										</NavLink>
 									</div>
 								</div>
 							</div>
