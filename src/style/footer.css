@@ -1,4 +1,5 @@
 .footer-card{
     font-size: smaller;
-border: none;
+    border: none !important;
+    text-align: center;
 }
