@@ -3,7 +3,7 @@ import Post from "../components/Post";
 import PostBox from "../components/PostBox";
 import ProfileCard from "../components/ProfileCard";
 import "../style/feed.css";
-import Footer from "../components/Footer";
+
 
 const Feed = () => {
   // const [post, setPost] = useState([]);
@@ -39,7 +39,6 @@ const Feed = () => {
         </div>
         <div className="col col-md-4 d-none d-sm-none d-md-block">
           <ProfileCard />
-          {/* <Footer /> */}
         </div>
       </div>
     </div>
