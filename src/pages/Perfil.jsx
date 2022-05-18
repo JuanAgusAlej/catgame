@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Perfil_Info from "./Perfil_Info";
-import Perfil_Publish from "./Perfil_Publish";
+import Perfil_Info from "../components/Perfil_Info";
+import Perfil_Publish from "../components/Perfil_Publish";
 import cat1 from "../img/cat1.png";
 import { Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";

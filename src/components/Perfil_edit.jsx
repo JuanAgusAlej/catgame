@@ -11,16 +11,28 @@ const Perfil_edit = () => {
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 
+	const [userAvatar, setUserAvatar] = useState({
+		img: cat1, // traer de la bd
+	});
+	console.log(userAvatar);
+
+	const saveUserAvatar = () => {
+		setUserAvatar({
+			...userAvatar,
+			img: JSON.parse(localStorage.getItem("userAvatarImg")).avatarImg,
+		});
+		handleClose();
+	};
+
 	const [userForm, setUserForm] = useState({
 		name: "", //traer de la base de datos
 		bio: "", // traer de la bd
 		email: "", //traer de la bd
 		password: "", // traer de la bd
-		img: "", // traer de la bd
 		confirmpassword: "",
 	});
 
-	const { name, email, bio, password, img, confirmpassword } = userForm;
+	const { name, email, bio, password, confirmpassword } = userForm;
 
 	const handleChange = (e) => {
 		setUserForm({
@@ -57,7 +69,7 @@ const Perfil_edit = () => {
 				<div className="col-12 col-md-6 col-lg-4">
 					<div className="card mb-3">
 						<img
-							src={cat1}
+							src={userAvatar.img}
 							className="rounded mx-auto d-block img-avatar"
 							alt="avatar"
 						/>
@@ -160,7 +172,11 @@ const Perfil_edit = () => {
 				</div>
 			</div>
 			<div className="d-flex justify-content-center">
-				<ModalAvatar show={show} handleClose={handleClose} />
+				<ModalAvatar
+					show={show}
+					handleClose={handleClose}
+					saveUserAvatar={saveUserAvatar}
+				/>
 			</div>
 		</div>
 	);

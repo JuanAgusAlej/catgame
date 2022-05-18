@@ -1,5 +1,5 @@
 import React from "react";
-import Perfil from "./components/Perfil";
+import Perfil from "./pages/Perfil";
 import Perfil_edit from "./components/Perfil_edit";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
