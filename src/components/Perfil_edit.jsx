@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import cat1 from "../img/cat1.png";
 import "../style/avatar.css";
-import ModalAvatar from "./Modal/ModalAvatar";
+import ModalAvatar from "./ModalAvatar";
 
 const Perfil_edit = () => {
 	const [show, setShow] = useState(false);

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Modal, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import { avatars } from "../../datos/avatars";
+import { avatars } from "../datos/avatars";
 
 const ModalAvatar = (props) => {
 	const { show, handleClose, saveUserAvatar } = props;

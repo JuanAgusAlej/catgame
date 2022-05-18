@@ -67,7 +67,7 @@ const Perfil = () => {
 							<div className="col">
 								<div class="card">
 									<img
-										src={cat1}
+										src={cat1} /// traer imagen de BD.
 										class="card-img-top img-avatar mx-auto"
 										alt="..."
 									/>
