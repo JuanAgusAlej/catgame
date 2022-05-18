@@ -3,11 +3,7 @@ import AboutUsCard from "./components/AboutUsCard";
 import AboutUs from "./pages/AboutUs";
 
 const App = () => {
-	return (
-		<div>
-			<AboutUs />
-		</div>
-	);
+	return <div>App</div>;
 };
 
 export default App;
