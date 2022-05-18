@@ -5,14 +5,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
 	return (
-		<BrowserRouter>
-			<Routes>
-				{/* <Route path="/" element={<HomeScreen/>} />
-				<Route path="about" element={<AboutUs />} /> */}
-				<Route path="perfil" element={<Perfil />} />
-				<Route path="/perfil/edit" element={<Perfil_edit />} />
-			</Routes>
-		</BrowserRouter>
+		<div>App</div>
+		// <BrowserRouter>
+		// 	<Routes>
+		// 		{/* <Route path="/" element={<HomeScreen/>} />
+		// 		<Route path="about" element={<AboutUs />} /> */}
+		// 		<Route path="perfil" element={<Perfil />} />
+		// 		<Route path="/perfil/edit" element={<Perfil_edit />} />
+		// 	</Routes>
+		// </BrowserRouter>
 	);
 };
 
