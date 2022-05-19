@@ -1,9 +1,12 @@
 import React from "react";
-import AboutUsCard from "./components/AboutUsCard";
-import AboutUs from "./pages/AboutUs";
+import Admin from "./pages/Admin";
 
 const App = () => {
-	return <div>App</div>;
+	return (
+		<div>
+			<Admin />
+		</div>
+	);
 };
 
 export default App;
