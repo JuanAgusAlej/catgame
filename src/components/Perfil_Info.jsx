@@ -8,8 +8,7 @@ const Perfil_Info = () => {
 				<div className="col">
 					<ul className="list-group">
 						<li className="list-group-item d-flex justify-content-between align-items-center">
-							Post
-							<span className="badge bg-primary rounded-pill">14</span>
+							Post #<span className="badge bg-primary rounded-pill">14</span>
 						</li>
 						<li className="list-group-item d-flex justify-content-between align-items-center">
 							Followers
