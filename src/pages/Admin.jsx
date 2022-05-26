@@ -1,4 +1,5 @@
 import React from "react";
+import SearchUser from "../components/SearchUser";
 import { usuarios } from "../datos/usuarios";
 
 const Admin = () => {
@@ -8,6 +9,7 @@ const Admin = () => {
 				<div className="row  border-bottom border-dark mb-3 mt-2 fst-italic">
 					<h1>Admin: User configuration</h1>
 				</div>
+				<SearchUser />
 				<div className="row">
 					<div className="col">
 						<table className="table table-striped">
