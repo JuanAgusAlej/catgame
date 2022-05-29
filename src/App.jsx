@@ -8,7 +8,7 @@ import "bootstrap/dist/js/bootstrap.bundle";
 import Admin from "./pages/Admin";
 
 const App = () => {
-	return <AboutUs />;
+	// return <AboutUs />;
 };
 
 export default App;
