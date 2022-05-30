@@ -1,5 +1,5 @@
 .load{
-    height: 100vh;
+  height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,8 +45,8 @@
 
   .pacman__food {
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 25px;
+    height: 25px;
     background: #fff;
     border-radius: 50%;
     top: 40%;
@@ -66,4 +66,3 @@
       opacity: 0;
     }
   }
-

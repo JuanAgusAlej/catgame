@@ -1,7 +1,9 @@
 .card-position{
     height: 100vh;
-    margin-top: 30vh;
-    position: sticky;
+    margin-top: 5vh;
+    top:200px;
+    z-index: 80;
+    position: sticky !important;
 }
 
 .profile-card{

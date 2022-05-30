@@ -39,7 +39,6 @@ const Feed = () => {
 
   return (
     <>
-      <Navbar />
       <div className="container  feed">
         <div className="row">
           <div className="col col-md-8 col-sm-12">
