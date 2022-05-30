@@ -4,6 +4,8 @@ import Perfil_Publish from "../components/Perfil_Publish";
 import cat1 from "../img/cat1.png";
 import { Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Perfil = () => {
 	const [informacion, setInformacion] = useState(true);
@@ -21,71 +23,74 @@ const Perfil = () => {
 	};
 
 	return (
-		<div className="container mt-5">
-			<div className="row">
-				<div className="col">
-					<h2 className="text-right">Hello!: 'User Name'</h2>
-					<p className="text-right fs-6 fst-italic">
-						En esta pagína encontrarás toda la información sobre tu usuario y
-						configuraciones
-					</p>
+		<>
+			<Navbar />
+			<div className="container mt-5">
+				<div className="row">
+					<div className="col">
+						<h2 className="text-right text-white">Hello!: 'User Name'</h2>
+						<p className="text-right fs-6 fst-italic text-white">
+							En esta pagína encontrarás toda la información sobre tu usuario y
+							configuraciones
+						</p>
+					</div>
 				</div>
-			</div>
-			<div className="row">
-				<div className="col-12 col-md-8 col-lg-8">
-					<div className="container">
-						<div className="row justify-content-between">
-							<div className="col text-center">
-								<button
-									className="btn btn-outline-primary"
-									onClick={mostrarInformacion}
-									style={informacion ? activeStyle : undefined}
-								>
-									Información
-								</button>
+				<div className="row">
+					<div className="col-12 col-md-8 col-lg-8">
+						<div className="container">
+							<div className="row justify-content-between">
+								<div className="col text-center">
+									<button
+										className="btn btn-outline-primary"
+										onClick={mostrarInformacion}
+										style={informacion ? activeStyle : undefined}
+									>
+										Información
+									</button>
+								</div>
+								<div className="col text-center">
+									<button
+										className="btn btn-outline-success"
+										onClick={mostrarPublicaciones}
+										style={informacion ? undefined : activeStyle}
+									>
+										Publicaciones
+									</button>
+								</div>
+								<div className="row">
+									<div className="col">
+										{informacion ? <Perfil_Info /> : <Perfil_Publish />}
+									</div>
+								</div>
 							</div>
-							<div className="col text-center">
-								<button
-									className="btn btn-outline-success"
-									onClick={mostrarPublicaciones}
-									style={informacion ? undefined : activeStyle}
-								>
-									Publicaciones
-								</button>
-							</div>
+						</div>
+					</div>
+					<div className="col-12 col-md-4 col-lg-4">
+						<div className="container">
 							<div className="row">
 								<div className="col">
-									{informacion ? <Perfil_Info /> : <Perfil_Publish />}
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div className="col-12 col-md-4 col-lg-4">
-					<div className="container">
-						<div className="row">
-							<div className="col">
-								<div class="card">
-									<img
-										src={cat1} /// traer imagen de BD.
-										class="card-img-top img-avatar mx-auto"
-										alt="..."
-									/>
-									<div className="card-body">
-										<h5 className="card-title text-center">'User Name'</h5>
-										<p className="card-text text-center text-muted">
-											'User Email'
-										</p>
-									</div>
-									<ul className="list-group list-group-flush text-center">
-										<li className="list-group-item">Age:'x'</li>
-										<li className="list-group-item">Sex:'Male'</li>
-										<li className="list-group-item">Member since: ''</li>
-									</ul>
-									<div className="card-body text-center">
-										<NavLink to="/perfil/edit" className="nav-link">
-											User Setting
-										</NavLink>
+									<div class="card">
+										<img
+											src={cat1} /// traer imagen de BD.
+											class="card-img-top img-avatar mx-auto"
+											alt="..."
+										/>
+										<div className="card-body">
+											<h5 className="card-title text-center">'User Name'</h5>
+											<p className="card-text text-center text-muted">
+												'User Email'
+											</p>
+										</div>
+										<ul className="list-group list-group-flush text-center">
+											<li className="list-group-item">Age:'x'</li>
+											<li className="list-group-item">Sex:'Male'</li>
+											<li className="list-group-item">Member since: ''</li>
+										</ul>
+										<div className="card-body text-center">
+											<NavLink to="/perfil/edit" className="nav-link">
+												User Setting
+											</NavLink>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -93,7 +98,8 @@ const Perfil = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+			<Footer />
+		</>
 	);
 };
 

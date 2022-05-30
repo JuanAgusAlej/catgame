@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 import cat1 from "../img/cat1.png";
 import "../style/avatar.css";
@@ -58,127 +60,131 @@ const Perfil_edit = () => {
 	}, [name, email, bio, password, confirmpassword]);
 
 	return (
-		<div className="container mt-5">
-			<div className="row mt-3 text-center">
-				<div className="col">
-					<h2>User Configuration</h2>
-				</div>
-			</div>
-
-			<div className="row mt-5 justify-content-center">
-				<div className="col-12 col-md-6 col-lg-4">
-					<div className="card mb-3">
-						<img
-							src={userAvatar.img}
-							className="rounded mx-auto d-block img-avatar"
-							alt="avatar"
-						/>
-						<div className="card-body text-center">
-							<button className="btn btn-sm btn-primary" onClick={handleShow}>
-								Change Avatar
-							</button>
-							<h4 className="card-title mt-2">Name:{userForm.name}</h4>
-							<p className="card-text">
-								<small className="text-muted">{userForm.email}</small>
-							</p>
-						</div>
+		<>
+			<Navbar />
+			<div className="container mt-5">
+				<div className="row mt-3 text-center">
+					<div className="col">
+						<h2 className="text-white">User Configuration</h2>
 					</div>
 				</div>
-				<div className="col-12 col-md-6 col-lg-4">
-					<form onSubmit={handleSubmit}>
-						<div className="mb-3">
-							<label className="form-label">User Name</label>
-							<input
-								type="text"
-								className="form-control"
-								id=""
-								aria-describedby=""
-								name="name"
-								value={name}
-								onChange={handleChange}
+
+				<div className="row mt-5 justify-content-center">
+					<div className="col-12 col-md-6 col-lg-4">
+						<div className="card mb-3">
+							<img
+								src={userAvatar.img}
+								className="rounded mx-auto d-block img-avatar"
+								alt="avatar"
 							/>
-						</div>
-						<div className="mb-3">
-							<label className="form-label">Bio</label>
-							<input
-								type="text"
-								className="form-control"
-								id="userbio"
-								aria-describedby="emailHelp"
-								name="bio"
-								value={bio}
-								onChange={handleChange}
-							/>
-							<div id="emailHelp" className="form-text">
-								Personal information that describe you
+							<div className="card-body text-center">
+								<button className="btn btn-sm btn-primary" onClick={handleShow}>
+									Change Avatar
+								</button>
+								<h4 className="card-title mt-2">Name:{userForm.name}</h4>
+								<p className="card-text">
+									<small className="text-muted">{userForm.email}</small>
+								</p>
 							</div>
 						</div>
-						<div className="mb-3">
-							<label className="form-label">Email address</label>
-							<input
-								type="email"
-								className="form-control"
-								id="exampleInputEmail"
-								aria-describedby="emailHelp"
-								name="email"
-								value={email}
-								onChange={handleChange}
-							/>
-							<div id="emailHelp" className="form-text">
-								We'll never share your email with anyone else.
+					</div>
+					<div className="col-12 col-md-6 col-lg-4">
+						<form onSubmit={handleSubmit}>
+							<div className="mb-3">
+								<label className="form-label">User Name</label>
+								<input
+									type="text"
+									className="form-control"
+									id=""
+									aria-describedby=""
+									name="name"
+									value={name}
+									onChange={handleChange}
+								/>
 							</div>
-						</div>
-						<div className="mb-3">
-							<label className="form-label">Password</label>
-							<input
-								type="password"
-								className="form-control"
-								id="exampleInputPasswordcofimation"
-								name="password"
-								value={password}
-								onChange={handleChange}
-							/>
-						</div>
-						<div className="mb-3">
-							<label className="form-label">Password Confirmation</label>
-							<input
-								type="password"
-								className="form-control"
-								id="confirmpassword"
-								name="confirmpassword"
-								value={confirmpassword}
-								onChange={handleChange}
-							/>
-						</div>
-						<div className="container">
-							<div className="row">
-								<div className="col">
-									<NavLink to="/perfil" className="nav-link">
-										Back to Perfil
-									</NavLink>
-								</div>
-								<div className="col">
-									<button
-										type="submit"
-										className="btn btn-success text-start"
-										disabled={loading}
-									>
-										Save
-									</button>
+							<div className="mb-3">
+								<label className="form-label">Bio</label>
+								<input
+									type="text"
+									className="form-control"
+									id="userbio"
+									aria-describedby="emailHelp"
+									name="bio"
+									value={bio}
+									onChange={handleChange}
+								/>
+								<div id="emailHelp" className="form-text">
+									Personal information that describe you
 								</div>
 							</div>
-						</div>
-					</form>
+							<div className="mb-3">
+								<label className="form-label">Email address</label>
+								<input
+									type="email"
+									className="form-control"
+									id="exampleInputEmail"
+									aria-describedby="emailHelp"
+									name="email"
+									value={email}
+									onChange={handleChange}
+								/>
+								<div id="emailHelp" className="form-text">
+									We'll never share your email with anyone else.
+								</div>
+							</div>
+							<div className="mb-3">
+								<label className="form-label">Password</label>
+								<input
+									type="password"
+									className="form-control"
+									id="exampleInputPasswordcofimation"
+									name="password"
+									value={password}
+									onChange={handleChange}
+								/>
+							</div>
+							<div className="mb-3">
+								<label className="form-label">Password Confirmation</label>
+								<input
+									type="password"
+									className="form-control"
+									id="confirmpassword"
+									name="confirmpassword"
+									value={confirmpassword}
+									onChange={handleChange}
+								/>
+							</div>
+							<div className="container">
+								<div className="row">
+									<div className="col">
+										<NavLink to="/perfil" className="nav-link">
+											Back to Perfil
+										</NavLink>
+									</div>
+									<div className="col">
+										<button
+											type="submit"
+											className="btn btn-success text-start"
+											disabled={loading}
+										>
+											Save
+										</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div className="d-flex justify-content-center">
+					<ModalAvatar
+						show={show}
+						handleClose={handleClose}
+						saveUserAvatar={saveUserAvatar}
+					/>
 				</div>
 			</div>
-			<div className="d-flex justify-content-center">
-				<ModalAvatar
-					show={show}
-					handleClose={handleClose}
-					saveUserAvatar={saveUserAvatar}
-				/>
-			</div>
-		</div>
+			<Footer />
+		</>
 	);
 };
 
