@@ -49,12 +49,8 @@ const CommentBox = ({
             </button>
 
             {hasCancelButton && (
-              <button
-                type="button"
-                className="btn text-uppercase"
-                onClick={handleCancel}
-              >
-                Cancel
+              <button type="button" className="btn" onClick={handleCancel}>
+                cancel
               </button>
             )}
           </div>

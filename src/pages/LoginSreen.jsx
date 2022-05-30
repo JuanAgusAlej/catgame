@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo1 from "../img/logo1.jpg";
+import logo1 from "../img/logo1.png";
 import LogGoogle from "../components/LogGoogle";
-import "../css/style.css";
+// import "../css/style.css";
 
 const LoginSreen = () => {
   // const history = useHistory();

@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../img/logo.png";
+import logo_neon from "../img/logo_neon.gif";
 import { Link } from "react-router-dom";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -21,9 +22,7 @@ const Navbar = () => {
         </div>
 
         <div className="logo-name mx-1 d-none d-md-block d-sm-none">
-          <b>
-            G<span>am</span>er<span>C</span>at
-          </b>
+          <img src={logo_neon} alt="GamerCatNeon" />
         </div>
         {/* </Link>  */}
         <ul className="navbar-nav ml-auto">

@@ -50,9 +50,9 @@ const PostBox = () => {
             <button
               onClick={sendPost}
               type="submit"
-              className=" btn postBox__postButton text-uppercase"
+              className=" btn postBox__postButton"
             >
-              Meow
+              meow
             </button>
           </div>
         </form>
