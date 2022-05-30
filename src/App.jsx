@@ -30,9 +30,9 @@ const App = () => {
         <Route
           path="/"
           element={
-            // <ProtectedRoutes>
-            <Feed />
-            // </ProtectedRoutes>
+            <ProtectedRoutes>
+              <Feed />
+            </ProtectedRoutes>
           }
         />
         <Route
@@ -44,7 +44,6 @@ const App = () => {
           }
         />
         <Route path="aboutus" element={<AboutUs />} />
-
         <Route path="admin" element={<Admin />} />
         <Route path="register" element={<RegScreen />} />
         <Route path="password" element={<Password />} />
