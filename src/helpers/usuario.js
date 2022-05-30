@@ -14,8 +14,8 @@ export const getUsuario = async () => {
 
 //post de usuario
 export const postUsuario = async (dato) => {
-	console.log(dato);
-	const resp = await fetch("https://gamer-cat.herokuapp.com/api/usuarios/", {
+	
+	const resp = await fetch(`${url}`, {
 	  method: "POST",
 	  body: JSON.stringify(dato),
 	  headers: {

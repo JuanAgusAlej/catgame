@@ -16,14 +16,7 @@ const RegScreen = () => {
     password: ""
     
   });
-  const limpiarCampos = () => {
-    setFormValue({
-      nombre: "",
-      correo: "",
-      password: ""
-      
-    });
-  };
+  
   const handleChange = (e) => {
     setFormValue({
       ...formValue,

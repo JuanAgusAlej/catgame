@@ -4,44 +4,45 @@ import { Link } from "react-router-dom";
 
 import "../style/post.css";
 
-const Post = ({ displayName, username, text, image, avatar }) => {
+const Post = ({ displayName, username, text, image, avatar, like, comentario}) => {
+
+  
+
   return (
     <div className="card post mb-3">
       <div className="row g-0 ">
         <div className="col-sm-12 post__avatar">
           <img
-            //   {avatar}
-            src="https://i.pinimg.com/564x/ba/92/7f/ba927ff34cd961ce2c184d47e8ead9f6.jpg"
+            src={avatar}
+            //src="https://i.pinimg.com/564x/ba/92/7f/ba927ff34cd961ce2c184d47e8ead9f6.jpg"
             className="avatar__img mx-2"
           />
           <div className="card-body post__body">
             <div className="card-title post__header">
               <h3>
-                <span>{displayName} DisplayName</span>
+                <span>{displayName} </span>
                 <span className="post__headerSpecial">
-                  {username} @username
+                   - @{username} 
                 </span>
               </h3>
             </div>
             <div className="post__headerDescription">
               <p className="card-text">
-                {text}This is a wider card with supporting text below as a
-                natural lead-in to additional content. This content is a little
-                bit longer.
+                {text}
               </p>
             </div>
             <img
-              //   {image}
-              src="https://media1.giphy.com/media/ICOgUNjpvO0PC/giphy.gif?cid=ecf05e47um1sc1svv5iwa80qlk9nhgfe7viyt2qbrwc8xhme&rid=giphy.gif&ct=g"
+              //   
+              src={image}
               alt=""
               className="post__img"
             />
             <div className="post__footer">
-              {/* <Link to="/Comments" >  tiene que llevar al componente Comments donde el post renderizado sea donde se hizo el click*/}
-              <i className="bi bi-chat post__option"></i>
               {/* </Link> */}
+              <i className="bi bi-heart post__option"> <span className="post__headerSpecial "> {like.length} </span>  </i>
+              {/* <Link to="/Comments" >  tiene que llevar al componente Comments donde el post renderizado sea donde se hizo el click*/}
+              <i className="bi bi-chat post__option"><span className="post__headerSpecial "> {comentario.length} </span></i>
               <i className="bi bi-share post__option"></i>
-              <i className="bi bi-heart post__option"></i>
             </div>
           </div>
         </div>
