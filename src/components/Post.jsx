@@ -41,8 +41,13 @@ const Post = ({ displayName, username, text, image, avatar, like, comentario}) =
               {/* </Link> */}
               <i className="bi bi-heart post__option"> <span className="post__headerSpecial "> {like.length} </span>  </i>
               {/* <Link to="/Comments" >  tiene que llevar al componente Comments donde el post renderizado sea donde se hizo el click*/}
+              <Link to="/comments">
               <i className="bi bi-chat post__option"><span className="post__headerSpecial "> {comentario.length} </span></i>
+              </Link>
+              <Link to="/*">
+
               <i className="bi bi-share post__option"></i>
+              </Link>
             </div>
           </div>
         </div>
