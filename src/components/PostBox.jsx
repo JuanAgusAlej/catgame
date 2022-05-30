@@ -1,30 +1,66 @@
 import React, { useState } from "react";
 import "../style/postbox.css";
+import Swal from "sweetalert2";
+import { postPublicacion } from "../helpers/publicaciones";
 
-const PostBox = () => {
-  const [postMessage, setPostMessage] = useState("");
 
-  const [postImage, setPostImage] = useState("");
+const PostBox = ({setActualizar}) => {
+  const [loading, setLoading] = useState(false);
+  const [formValue, setFormValue] = useState({
+    texto: "",
+       
+  });
+  const limpiarCampos = () => {
+    setFormValue({
+      texto: "",
+      imagen: ""
+      
+    });
+  };
+  const handleChange = (e) => {
+    setFormValue({
+      ...formValue,
+      [e.target.name]: e.target.value,
+    });
+    
+  };
+  
 
-  const sendPost = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    // nombrebasededatos.collection("posts").add({
-    //   displayName: "Pablito",
-    //   username: "clavo1clavito",
-    //   text: postMessage,
-    //   image: postImage,
-    //  avatar:
-    // })
+    setLoading(true);
+    const { texto} = formValue;
+    
+    if (texto) {
+      postPublicacion(formValue).then((respuesta) => {
 
-    setPostImage("");
-    setPostImage("");
+        if (respuesta.errors) {
+          setLoading(false);
+          return Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: respuesta.errors[0].msg,
+          });
+
+        } else {
+          setLoading(false);
+          Swal.fire({
+            icon: "success",
+            title: "OK",
+            text: `Se creo el Post`,
+          });
+          limpiarCampos()
+          setActualizar(true)
+        }
+           
+      });
+    }
   };
-
   return (
     <div className="card mb-3 postBox">
       <div className="row g-0 ">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="postBox__input">
             <img
               src="https://ae01.alicdn.com/kf/HTB1ZkKqaMkLL1JjSZFpq6y7nFXaI/Funny-Cat-Costumes-Pirate-Suit-Cat-Clothes-Kitty-Kitten-Corsair-Halloween-Costume-Puppy-Suits-Dressing-Up.jpg_Q90.jpg_.webp"
@@ -32,25 +68,27 @@ const PostBox = () => {
               className="avatar__img"
             />
             <input
-              onChange={(e) => setPostMessage(e.target.value)}
-              value={postMessage}
+              name="texto"
+              onChange={handleChange}
+              value={formValue.texto}
               placeholder="Meow to the world"
               type="text"
               maxLength={200}
             />
           </div>
           <input
-            onChange={(e) => setPostImage(e.target.value)}
-            value={postImage}
+            name="imagen"
+            onChange={handleChange}
+            value={formValue.imagen}
             className="postBox__inputImg"
             placeholder="Optional: Enter image URL"
             type="text"
           />
           <div className="text-end">
             <button
-              onClick={sendPost}
               type="submit"
               className=" btn postBox__postButton"
+              disabled={loading}
             >
               meow
             </button>
