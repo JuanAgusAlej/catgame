@@ -30,7 +30,7 @@ const LoginSreen = () => {
               </div>
               <div className="card-body align-items-center flex-column ">
                 <h2 className="card-title tittle my-3">Log In</h2>
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className="form-group mb-3 ">
                     <input
                       type="email"
