@@ -9,6 +9,7 @@ import Swal from "sweetalert2";
 const RegScreen = () => {
 
   const [loading, setLoading] = useState(false);
+  const history = useNavigate();
   const [formValue, setFormValue] = useState({
     nombre: "",
     correo: "",
@@ -30,6 +31,7 @@ const RegScreen = () => {
     });
     
   };
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -55,6 +57,7 @@ const RegScreen = () => {
             title: "OK",
             text: `El usuario ${formValue.nombre} fue creado`,
           });
+          history("/login")
         }
            
       });

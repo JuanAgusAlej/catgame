@@ -42,14 +42,14 @@ const LoginSreen = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { correo, password } = formValue;
-    console.log(correo, password);
+    
     if (correo && password) {
       setBtnDisable(true);
-      console.log(isMounted.current)
+    
       if (isMounted.current) {
         
         postAuth(formValue).then((respuesta) => {
-          console.log(respuesta + "respuesta");
+          
           setLogin(respuesta);
 
           setBtnDisable(false);
