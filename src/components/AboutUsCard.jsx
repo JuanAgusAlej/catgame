@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { getNosotros } from "../helpers/nosotrosData";
+import Loading from "./Loading";
 
 const AboutUsCard = () => {
-
   const [infoNosotros, setInfoNosotros] = useState({
     loading: true,
     datos: [],

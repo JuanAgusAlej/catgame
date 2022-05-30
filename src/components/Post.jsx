@@ -37,10 +37,12 @@ const Post = ({ displayName, username, text, image, avatar }) => {
               className="post__img"
             />
             <div className="post__footer">
-              {/* <Link to="/Comments" >  tiene que llevar al componente Comments donde el post renderizado sea donde se hizo el click*/}
-              <i className="bi bi-chat post__option"></i>
-              {/* </Link> */}
-              <i className="bi bi-share post__option"></i>
+              <Link to="/comments">
+                <i className="bi bi-chat post__option"></i>
+              </Link>
+              <Link to="/*">
+                <i className="bi bi-share post__option"></i>
+              </Link>
               <i className="bi bi-heart post__option"></i>
             </div>
           </div>

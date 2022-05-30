@@ -8,3 +8,7 @@
     text-decoration: none;
     color: gray !important;
 }
+
+.foot-item:hover{
+    color:rgba(255,50,112) !important;
+   }

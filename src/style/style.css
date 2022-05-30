@@ -42,6 +42,11 @@ body{
 
    a{
      text-decoration: none !important;
+     color: gray !important;
+   }
+
+   a:hover{
+    color:rgba(255,50,112) !important;
    }
 
    /* .bi{

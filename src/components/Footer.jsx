@@ -7,9 +7,9 @@ const Footer = () => {
   return (
     <div className="card footer-card">
       <div className="card-body text-muted">
-        <div className="col-12 foot-item">
+        <div className="col-12 ">
           <Link to="*">
-            <i className="bi  bi-facebook mx-1 "></i>
+            <i className="bi foot-item bi-facebook mx-1 "></i>
           </Link>
           <Link to="*">
             <i className="bi bi-instagram mx-1 "></i>
