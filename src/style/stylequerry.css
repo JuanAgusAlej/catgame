@@ -1,0 +1,29 @@
+.cardName{
+    width: 100%;
+    }
+@media (max-width: 770px) {
+        .containerLoguin {
+            width: 500px;
+            height: 300px;
+        }
+      }
+@media  (max-width: 440px){
+        .card-end{
+            display: flex;
+            flex-direction: column;
+        }
+        .boton-inicio{
+            margin-bottom: 5px;
+        }
+    }
+@media (max-width: 550px) {
+        .rowPass {
+        flex-direction: column-reverse !important;
+        }
+        .card-img-top{
+            width: 500px;
+            height: 300px;
+        }
+      }
+      
+    
