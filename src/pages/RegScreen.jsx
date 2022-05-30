@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useRef, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import logo2 from "../img/logo2.png";
 import "../style/login.css";
@@ -24,7 +24,7 @@ const RegScreen = () => {
       <div className="container container-login">
         <div className="row d-flex align-items-center mt-5">
           <div className="col col-md-6 col-sm-12">
-            <form className="d-flex flex-column">
+            <form className="d-flex flex-column" onSubmit={handleSubmit}>
               <div className=" mb-3">
                 <h2 className="tittle">Sign up</h2>
               </div>
@@ -46,7 +46,7 @@ const RegScreen = () => {
                   placeholder="Enter your e-mail"
                   required
                   id="exampleInputEmail1"
-                  value={formValue.email}
+                  value={formValue.correo}
                   onChange={handleChange}
                 />
 
@@ -63,7 +63,7 @@ const RegScreen = () => {
 
               <div className="text-end">
                 <Link to="/loading">
-                  <button type="submit" className="btn my-4">
+                  <button className="btn my-4" type="submit" disabled={loading}>
                     sign up
                   </button>
                 </Link>
