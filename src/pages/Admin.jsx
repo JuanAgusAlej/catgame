@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import SearchUser from "../components/SearchUser";
-import { usuarios } from "../datos/usuarios";
-import { deleteUsuario, getUsuario } from "../helpers/getUsuario";
+
+import { deleteUsuario, getUsuario } from "../helpers/usuario";
 
 import "../style/admin.css";
 const Admin = () => {

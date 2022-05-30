@@ -113,7 +113,7 @@ const LoginSreen = () => {
                   <Link className="boton-inicio btn btn-primary" to="/password">
                     ¿Olvidaste tu contraseña?
                   </Link>
-                  <Link className="boton-inicio btn btn-primary" to="/reg">
+                  <Link className="boton-inicio btn btn-primary" to="/regScreen">
                     Registrate
                   </Link>
                 </div>

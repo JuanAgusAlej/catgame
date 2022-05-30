@@ -1,13 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import logo1 from "../img/logo1.png";
 import "../style/login.css";
+import { postUsuario } from "../helpers/usuario.js";
+import Swal from "sweetalert2";
+
 
 const RegScreen = () => {
+
+  const [loading, setLoading] = useState(false);
   const [formValue, setFormValue] = useState({
     nombre: "",
-    email: "",
-    password: "",
+    correo: "",
+    password: ""
+    
   });
+  const limpiarCampos = () => {
+    setFormValue({
+      nombre: "",
+      correo: "",
+      password: ""
+      
+    });
+  };
+
   const handleChange = (e) => {
     setFormValue({
       ...formValue,
@@ -15,13 +31,41 @@ const RegScreen = () => {
     });
   };
 
-  console.log(formValue);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    postUsuario(formValue).then((respuesta) => {
+      //   console.log(respuesta);
+      if (respuesta.errors) {
+        setLoading(false);
+        return Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: respuesta.errors[0].msg,
+        });
+        // return window.alert(respuesta.errors[0].msg);
+      } else {
+        setLoading(false);
+        Swal.fire({
+          icon: "success",
+          title: "OK",
+          text: `El usuario ${formValue.nombre} fue creado`,
+        });
+      }
+      limpiarCampos();
+      
+    });
+  };
+
+  
 
   return (
     <div className="container container-login">
       <div className="row d-flex align-items-center mt-5">
         <div className="col-6 ">
-          <form className="d-flex flex-column">
+          <form className="d-flex flex-column" onSubmit={handleSubmit}>
             <div className="mb-3">
               {/* <label className="form-label">Nombre de Usuario</label> */}
               <input
@@ -35,12 +79,12 @@ const RegScreen = () => {
               />
               {/* <label className="form-label">Correo electronico</label> */}
               <input
-                type="email"
-                name="email"
+                type="correo"
+                name="correo"
                 className="form-control"
                 placeholder="Enter your e-mail"
                 id="exampleInputEmail1"
-                value={formValue.email}
+                value={formValue.correo}
                 onChange={handleChange}
               />
             </div>
@@ -55,7 +99,7 @@ const RegScreen = () => {
                 onChange={handleChange}
               />
             </div>
-            <button type="submit" className="btn">
+            <button className="btn" type="submit"  disabled={loading}>
               registrar
             </button>
           </form>
