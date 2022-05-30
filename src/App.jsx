@@ -31,12 +31,21 @@ const App = () => {
 						</ProtectedRoutes>
 					}
 				/>
+				<Route
+          path="profile"
+          element={
+            <ProtectedRoutes>
+              <Perfil />
+            </ProtectedRoutes>
+          }
+        />
 				<Route path="aboutus" element={<AboutUs />} />
-				<Route path="perfil" element={<Perfil />} />
 				<Route path="admin" element={<Admin />} />
 				<Route path="regScreen" element={<RegScreen />} />
 				<Route path="password" element={<Password />} />
 				<Route path="noticias" element={<News />} />
+				<Route path="loading" element={<Loading />} />
+        		<Route path="comments" element={<Comments />} />
 				<Route path="*" element={<Error404 />} />
 			</Routes>
 		</BrowserRouter>
