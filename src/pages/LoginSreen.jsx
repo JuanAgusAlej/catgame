@@ -1,22 +1,72 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useRef, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import logo1 from "../img/logo1.png";
 import LogGoogle from "../components/LogGoogle";
+import { postAuth } from "../helpers/loguin";
 // import "../css/style.css";
 
 const LoginSreen = () => {
-  // const history = useHistory();
+
+  const isMounted = useRef(true);
+
+  const history = useNavigate();
+  
   const [formValue, setFormValue] = useState({
-    email: "",
+    correo: "",
     password: "",
   });
+
+  const [btnDisable, setBtnDisable] = useState(false);
+
+  const [login, setLogin] = useState({});
+
+  useEffect(() => {
+    if (login.token) {
+      localStorage.setItem("auth", JSON.stringify(login));
+      setTimeout(() => {
+        history("/");
+      }, 1000);
+    }
+  }, [login, history]);
+
+  // useEffect(() => {
+  //   return () => {
+  //     isMounted.current = false;
+  //   };
+  // }, []);
+
+
   const handleChange = (e) => {
     setFormValue({
       ...formValue,
       [e.target.name]: e.target.value,
     });
   };
-  console.log(formValue);
+  // console.log(formValue);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { correo, password } = formValue;
+    console.log(correo, password);
+    if (correo && password) {
+      setBtnDisable(true);
+      console.log(isMounted.current)
+      if (isMounted.current) {
+        
+        postAuth(formValue).then((respuesta) => {
+          console.log(respuesta + "respuesta");
+          setLogin(respuesta);
+
+          setBtnDisable(false);
+
+          setFormValue({
+            correo: "",
+            password: "",
+          });
+        });
+      }
+    }
+  };
 
   return (
     <div className="containerLoguin">
@@ -28,7 +78,7 @@ const LoginSreen = () => {
             </div>
             <div className="card-body align-items-center flex-column ">
               <h5 className="card-title text-center">Inicio de Sesion</h5>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="form-group mb-3 ">
                   <label>
                     <b>Correo electronico</b>
@@ -55,7 +105,7 @@ const LoginSreen = () => {
                 </div>
                 <div className="card-end d-flex justify-content-between ">
                   <div className="d-grid gap-1">
-                    <button className="boton-inicio btn btn-primary">
+                    <button className="boton-inicio btn btn-primary" disabled={btnDisable}>
                       <i className="fa fa-sign-in me-2" aria-hidden="true"></i>
                       Ingresar
                     </button>

@@ -7,8 +7,8 @@ import "bootstrap/dist/js/bootstrap.bundle";
 
 import AboutUs from "./pages/AboutUs";
 import Admin from "./pages/Admin";
-import CardNoticias from "./pages/CardNoticias";
-import Contraseña from "./pages/Contraseña";
+import News from "./pages/News";
+import Password from "./pages/Password";
 import Error404 from "./pages/Error404";
 import Feed from "./pages/Feed";
 import LoginScreen from "./pages/LoginSreen";
@@ -35,8 +35,8 @@ const App = () => {
 				<Route path="perfil" element={<Perfil />} />
 				<Route path="admin" element={<Admin />} />
 				<Route path="/egister" element={<RegScreen />} />
-				<Route path="password" element={<Contraseña />} />
-				<Route path="noticias" element={<CardNoticias />} />
+				<Route path="password" element={<Password />} />
+				<Route path="noticias" element={<News />} />
 				<Route path="*" element={<Error404 />} />
 			</Routes>
 		</BrowserRouter>
