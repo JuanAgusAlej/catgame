@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import logo from "../img/logo.jpg";
-import "../css/style.css";
+import logo1 from "../img/logo1.png";
+import "../style/login.css";
 
 const RegScreen = () => {
   const [formValue, setFormValue] = useState({
@@ -18,48 +18,50 @@ const RegScreen = () => {
   console.log(formValue);
 
   return (
-    <div className="container">
-      <div className="rowPass d-flex align-items-center">
+    <div className="container container-login">
+      <div className="row d-flex align-items-center mt-5">
         <div className="col-6 ">
           <form className="d-flex flex-column">
             <div className="mb-3">
-              <label className="form-label">Nombre de Usuario</label>
+              {/* <label className="form-label">Nombre de Usuario</label> */}
               <input
                 type="text"
                 name="nombre"
                 className="form-control"
-                placeholder=""
+                placeholder="Username"
                 required
                 value={formValue.nombre}
                 onChange={handleChange}
               />
-              <label className="form-label">Correo electronico</label>
+              {/* <label className="form-label">Correo electronico</label> */}
               <input
                 type="email"
                 name="email"
                 className="form-control"
+                placeholder="Enter your e-mail"
                 id="exampleInputEmail1"
                 value={formValue.email}
                 onChange={handleChange}
               />
             </div>
             <div className="mb-3">
-              <label className="form-label">Password</label>
+              {/* <label className="form-label">Password</label> */}
               <input
                 type="password"
                 className="form-control"
+                placeholder="Enter your password"
                 name="password"
                 value={formValue.password}
                 onChange={handleChange}
               />
             </div>
-            <button type="submit" className="btn btn-primary">
-              Registrar
+            <button type="submit" className="btn">
+              registrar
             </button>
           </form>
         </div>
         <div className="col">
-          <img src={logo} className="card-img-top" alt="imagen de noticia" />
+          <img src={logo1} className="card-img-top" alt="imagen de noticia" />
         </div>
       </div>
     </div>

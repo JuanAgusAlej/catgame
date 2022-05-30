@@ -9,22 +9,22 @@ const Footer = () => {
       <div className="card-body text-muted">
         <div className="col-12">
           {/* <Link to="*"> */}
-          <i class="bi bi-facebook"></i>
+          <i className="bi bi-facebook mx-1"></i>
           {/* </Link>  */}
           {/* <Link to="*"> */}
-          <i class="bi bi-instagram"></i>
+          <i className="bi bi-instagram mx-1"></i>
           {/* </Link>  */}
           {/* <Link to="*"> */}
-          <i class="bi bi-twitter"></i>
+          <i className="bi bi-twitter mx-1"></i>
           {/* </Link>  */}
           {/* <Link to="*"> */}
-          <i class="bi bi-github"></i>
+          <i className="bi bi-github mx-1"></i>
           {/* </Link>  */}
           {/* <Link to="*"> */}
-          <i class="bi bi-discord"></i>
+          <i className="bi bi-discord mx-1"></i>
           {/* </Link>  */}
           {/* <Link to="*"> */}
-          <i class="bi bi-slack"></i>
+          <i className="bi bi-slack mx-1"></i>
           {/* </Link>  */}
         </div>
         {/* <Link to="*"> */}
