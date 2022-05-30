@@ -1,5 +1,4 @@
 import React from "react";
-import SearchUser from "../components/SearchUser";
 import { usuarios } from "../datos/usuarios";
 
 import "../style/admin.css";
@@ -9,8 +8,6 @@ const Admin = () => {
       <div className="row my-3 mt-2">
         <h2 className="config">Admin: User configuration</h2>
       </div>
-
-      <SearchUser />
 
       <div className="row">
         <div className="col">

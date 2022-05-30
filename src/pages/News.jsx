@@ -6,20 +6,16 @@ import "../style/news.css";
 
 const News = () => {
   return (
-    <>
-      <Navbar />
-      <div className="container container-noticias">
-        <div className="row">
-          <div className="col-12">
-            <h2 className="news-header mt-3 text-center">News Section</h2>
-          </div>
-        </div>
-        <div className="row">
-          <NewsCard />
+    <div className="container container-noticias">
+      <div className="row">
+        <div className="col-12">
+          <h2 className="news-header my-3 text-center">News Section</h2>
         </div>
       </div>
-      <Footer />
-    </>
+      <div className="row">
+        <NewsCard />
+      </div>
+    </div>
   );
 };
 

@@ -28,5 +28,13 @@
     cursor: pointer;
   }
 
+  .logo-name{
+    cursor: pointer;
+  }
+
+  .nav-item a{
+ text-decoration: none;
+ color: white;
+  }
   
   

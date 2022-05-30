@@ -16,9 +16,12 @@
     border-radius: 20px !important;
     border: none;
 }
-
+.news-top{
+    text-align: center;
+}
 .news-img{
     border-radius: 20px;
+    width: 300px;
 }
 .articulo{
     text-align: justify;
