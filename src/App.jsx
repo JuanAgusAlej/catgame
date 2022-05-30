@@ -17,6 +17,7 @@ import RegScreen from "./pages/RegScreen";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProtectedRoutes from "./components/ProtectedRoutes";
+import Perfil_edit from "./components/Perfil_edit";
 
 const App = () => {
 	return (
@@ -33,8 +34,9 @@ const App = () => {
 				/>
 				<Route path="aboutus" element={<AboutUs />} />
 				<Route path="perfil" element={<Perfil />} />
+				<Route path="perfil/edit" element={<Perfil_edit />} />
 				<Route path="admin" element={<Admin />} />
-				<Route path="/egister" element={<RegScreen />} />
+				<Route path="/register" element={<RegScreen />} />
 				<Route path="password" element={<Contraseña />} />
 				<Route path="noticias" element={<CardNoticias />} />
 				<Route path="*" element={<Error404 />} />
