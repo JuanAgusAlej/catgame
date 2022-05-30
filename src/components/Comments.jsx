@@ -12,9 +12,8 @@ import {
 
 import "../style/comments.css";
 import Post from "./Post";
-import Footer from "./Footer";
 
-const Comments = ({ currentUserId }) => {
+const Comments = ({ commentsUrl, currentUserId }) => {
   const [backendComments, setBackendComments] = useState([]);
   const [activeComment, setActiveComment] = useState(null);
   const rootComments = backendComments.filter(
@@ -64,33 +63,84 @@ const Comments = ({ currentUserId }) => {
   }, []);
 
   return (
-    <>
-      <div className="container mt-3">
-        <div className="comments">
-          <Post />
-          <div>
-            {rootComments.map((rootComment) => (
-              <Comment
-                key={rootComment.id}
-                comment={rootComment}
-                replies={getReplies(rootComment.id)}
-                activeComment={activeComment}
-                setActiveComment={setActiveComment}
-                addComment={addComment}
-                deleteComment={deleteComment}
-                updateComment={updateComment}
-                currentUserId={currentUserId}
-              />
-            ))}
-            <div>
-              <CommentBox submitLabel="meow" handleSubmit={addComment} />
-            </div>
-          </div>
+    <div className="comments">
+      <Post />
+      <div>
+        {rootComments.map((rootComment) => (
+          <Comment
+            key={rootComment.id}
+            comment={rootComment}
+            replies={getReplies(rootComment.id)}
+            activeComment={activeComment}
+            setActiveComment={setActiveComment}
+            addComment={addComment}
+            deleteComment={deleteComment}
+            updateComment={updateComment}
+            currentUserId={currentUserId}
+          />
+        ))}
+        <div>
+          <CommentBox submitLabel="MEOW" handleSubmit={addComment} />
         </div>
       </div>
-      <Footer />
-    </>
+    </div>
   );
 };
 
 export default Comments;
+
+// import React, { useEffect, useState } from "react";
+// import {
+//   getComments as getCommentsApi,
+//   createComment as createCommentApi,
+// } from "../helpers/commentData";
+// import Comment from "./Comment";
+
+// import "../style/comments.css";
+// import CommentBox from "./CommentBox";
+
+// const Comments = ({ currentUserId }) => {
+//   const [backendComments, setBackendComments] = useState([]);
+
+//   const rootComments = backendComments.filter(
+//     (backendComment) => backendComment.parentId === null
+//   );
+//   const getReplies = (commentId) => {
+//     return backendComments.filter(
+//       (backendComments) => backendComments.parentId === commentId
+//     );
+//   };
+
+//   const addComment = (text, parentId) => {
+//     console.log("addComment", text, parentId);
+//     createCommentApi(text, parentId).then((comment) => {
+//       setBackendComments([comment, ...backendComments]);
+//     });
+//   };
+
+//   //   console.log("backendComments", backendComments);
+//   useEffect(() => {
+//     getCommentsApi().then((data) => {
+//       setBackendComments(data);
+//     });
+//   }, []);
+
+//   return (
+//     <div className="comments">
+//       <h3 className="comments-tittle">Comments</h3>
+//       <div className="comments-container">
+//         {rootComments.map((rootComment) => (
+//           <Comment
+//             key={rootComment.id}
+//             comment={rootComment}
+//             replies={getReplies(rootComment.id)}
+//           />
+//         ))}
+//         <div className="comment-box-tittle">Write comment</div>
+//         <CommentBox submitLabel="MEOW" handleSubmit={addComment} />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Comments;

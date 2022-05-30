@@ -18,14 +18,14 @@ const ProfileCard = () => {
         </div>
 
         <div className="text-center">
-          <Link to="/profile">
-            <button className=" btn postBox__postButton my-4">profile</button>
-          </Link>
+          {/* <Link to="/profile"> */}
+          <button className=" btn postBox__postButton my-4">profile</button>
+          {/* </Link>  */}
         </div>
         <div className="text-center">
-          <Link to="/">
-            <button className=" btn postBox__postButton my-4">meow</button>
-          </Link>
+          {/* <Link to="/"> */}
+          <button className=" btn postBox__postButton my-4">meow</button>
+          {/* </Link>  */}
         </div>
         <div>
           <Footer />

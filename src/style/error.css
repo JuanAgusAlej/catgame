@@ -1,12 +1,12 @@
 .error{
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
   .img-Error{
-    width: 30%;
+    width: 40%;
     align-items: center;
     cursor: pointer;
     }

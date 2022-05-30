@@ -1,38 +1,32 @@
 .navbar{
-  background-color: #0c0245;
-  color: white;
-  position: sticky !important;
-  top: 0;
-  z-index: 99;
-  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #FF3270, 0 0 0.5em #FF3270, 0 0 0.1em #FF3270, 0 10px 3px #000;
-  font-family:'Courier New', Courier ;
-  min-width: 100vw !important;
-}
+    background-color: #0c0245;
+    color: white;
+    position: sticky !important;
+    top: 0;
+    z-index: 99;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #FF3270, 0 0 0.5em #FF3270, 0 0 0.1em #FF3270, 0 10px 3px #000;
+    font-family:'Courier New', Courier ;
+    min-width: 100vw !important;
+  }
+  
+  .navbar-nav{
+    flex-direction: row !important;
+  }
 
-.navbar-nav{
-  flex-direction: row !important;
-}
+  .nav-item{
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
 
-.nav-item{
-  font-size: 1.6rem;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
+  .nav-item:hover{
+    transform: scale(2.0);
+  }
+  
+  .img-logo {
+    width: 100px;
+    cursor: pointer;
+  }
 
-.nav-item:hover{
-  transform: scale(2.0);
-}
-
-.img-logo {
-  width: 100px;
-  cursor: pointer;
-}
-
-.logo-name{
-  cursor: pointer;
-}
-
-.nav-item a{
-text-decoration: none;
-color: white !important;
-}
+  
+  

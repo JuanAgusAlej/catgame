@@ -55,21 +55,15 @@
       margin-top: 20px;
       font-size: medium;
     }
-
-    .post__option a{
-      text-decoration: none;
-      color: gray !important;
-     }
-  .post__option {
+    
+  .post__option{
       cursor: pointer;
       padding: 5px;
-      color: gray !important;
       transition: transform 0.2s;
     }
     
-    
-
     .post__option:hover {
-      color:rgba(255,50,112) !important;
+      color:rgba(255,50,112);
+      transform: scale(1.3);
     }
   

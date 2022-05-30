@@ -4,7 +4,6 @@
 
 .config{
     text-align: center;
-    color: white;
     text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff3270, 0 0 0.5em #ff3270, 0 0 0.1em #8a2be2, 0 6px 3px #000;
     font-style: italic;
     font-weight: bold;
@@ -12,12 +11,10 @@
     padding: 1rem;
     margin-top: 1rem;
 }
-
 table th{
     font-style: italic;
     text-align: center;
 }
-
 .delete-btn{
     display: flex;
     justify-content: center;

@@ -1,22 +1,20 @@
 import React from "react";
 import AboutUsCard from "../components/AboutUsCard";
-import Footer from "../components/Footer";
 
 const AboutUs = () => {
   return (
-    <>
-      <div className="container container-aboutus">
-        <div className="row">
-          <div className="col">
-            <h2 className="mb-5 tittle">About Us</h2>
-          </div>
-          <div className="row justify-content-center">
-            <AboutUsCard />
-          </div>
+    <div className="container">
+      <div className="row">
+        <div className="col">
+          <h2 className="fs-1 fst-italic text-center mb-5 border rounded-pill border-warning border-3">
+            About Us
+          </h2>
+        </div>
+        <div className="row justify-content-center">
+          <AboutUsCard />
         </div>
       </div>
-      <Footer />
-    </>
+    </div>
   );
 };
 
