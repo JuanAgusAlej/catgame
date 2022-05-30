@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import logo1 from "../img/logo1.png";
 import LogGoogle from "../components/LogGoogle";
 import { postAuth } from "../helpers/loguin";
-// import "../css/style.css";
 
 const LoginSreen = () => {
 
@@ -29,11 +28,7 @@ const LoginSreen = () => {
     }
   }, [login, history]);
 
-  // useEffect(() => {
-  //   return () => {
-  //     isMounted.current = false;
-  //   };
-  // }, []);
+  
 
 
   const handleChange = (e) => {
@@ -42,7 +37,7 @@ const LoginSreen = () => {
       [e.target.name]: e.target.value,
     });
   };
-  // console.log(formValue);
+   
 
   const handleSubmit = (e) => {
     e.preventDefault();

@@ -23,40 +23,42 @@ const RegScreen = () => {
       
     });
   };
-
   const handleChange = (e) => {
     setFormValue({
       ...formValue,
       [e.target.name]: e.target.value,
     });
+    
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     setLoading(true);
+    const { nombre, correo, password } = formValue;
+    
+    if (nombre && correo && password) {
+      postUsuario(formValue).then((respuesta) => {
 
-    postUsuario(formValue).then((respuesta) => {
-      //   console.log(respuesta);
-      if (respuesta.errors) {
-        setLoading(false);
-        return Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: respuesta.errors[0].msg,
-        });
-        // return window.alert(respuesta.errors[0].msg);
-      } else {
-        setLoading(false);
-        Swal.fire({
-          icon: "success",
-          title: "OK",
-          text: `El usuario ${formValue.nombre} fue creado`,
-        });
-      }
-      limpiarCampos();
-      
-    });
+        if (respuesta.errors) {
+          setLoading(false);
+          return Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: respuesta.errors[0].msg,
+          });
+
+        } else {
+          setLoading(false);
+          Swal.fire({
+            icon: "success",
+            title: "OK",
+            text: `El usuario ${formValue.nombre} fue creado`,
+          });
+        }
+           
+      });
+    }
   };
 
   
@@ -67,7 +69,6 @@ const RegScreen = () => {
         <div className="col-6 ">
           <form className="d-flex flex-column" onSubmit={handleSubmit}>
             <div className="mb-3">
-              {/* <label className="form-label">Nombre de Usuario</label> */}
               <input
                 type="text"
                 name="nombre"
@@ -77,7 +78,6 @@ const RegScreen = () => {
                 value={formValue.nombre}
                 onChange={handleChange}
               />
-              {/* <label className="form-label">Correo electronico</label> */}
               <input
                 type="correo"
                 name="correo"
@@ -89,7 +89,6 @@ const RegScreen = () => {
               />
             </div>
             <div className="mb-3">
-              {/* <label className="form-label">Password</label> */}
               <input
                 type="password"
                 className="form-control"

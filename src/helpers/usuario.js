@@ -13,19 +13,22 @@ export const getUsuario = async () => {
 };
 
 //post de usuario
-export const postUsuario = async (data) => {
-	const resp = await fetch(`${url}`, {
+export const postUsuario = async (dato) => {
+	console.log(dato);
+	const resp = await fetch("https://gamer-cat.herokuapp.com/api/usuarios/", {
 	  method: "POST",
-	  body: JSON.stringify(data),
-	  
+	  body: JSON.stringify(dato),
+	  headers: {
+			"Content-type": "application/json; charset=UTF-8",
+		}
 	});
 	const datos = await resp.json();
   
 	return datos;
-  };
+};
   
   //put de usuario- actualizar
-  export const putUsuario = async (id, data) => {
+export const putUsuario = async (id, data) => {
 	const resp = await fetch(`${url}usuarios/${id}`, {
 	  method: "PUT",
 	  body: JSON.stringify(data),
@@ -37,7 +40,7 @@ export const postUsuario = async (data) => {
 	const datos = await resp.json();
   
 	return datos;
-  };
+};
 
 //delete de usuario
 export const deleteUsuario = async (id) => {
@@ -52,4 +55,4 @@ export const deleteUsuario = async (id) => {
 	const datos = await resp.json();
   
 	return datos;
-  };
+};

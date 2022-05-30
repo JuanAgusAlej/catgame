@@ -12,14 +12,12 @@ const Admin = () => {
 		datos: [],
 	});
 
-	//para traer los datos de la Base de Datos que armemos
   useEffect(() => {
     updateDatos()
 		
   }, []);
   const updateDatos = () => {
     getUsuario().then((respuesta) => {
-			// console.log(respuesta);
 			setInfoUsuario({
 				loading: false,
 				datos: respuesta,
@@ -27,7 +25,6 @@ const Admin = () => {
 		});
   };
   
-  //---------------------------
   const borrarUsuario = (uid) => {
       Swal.fire({
       title: "Esta seguro?",
