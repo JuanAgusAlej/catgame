@@ -1,5 +1,6 @@
 body{
     background: url(../img/background.png) !important;
+    height: 100vh ;
     position: relative;
 }
 
@@ -40,14 +41,12 @@ body{
     transition: 200ms;
    }
 
+   a{
+    text-decoration: none !important;
+    color: gray !important;
+    }
 
-   /* .bi{
-        cursor: pointer;
-        padding: 5px;
-        transition: transform 0.2s;
-      }
-      
-    .bi:hover {
-        color:rgba(255,50,112);
-        transform: scale(1.3) !important;
-      } */
+    a:hover{
+    color:rgba(255,50,112) !important;
+    }
+   
