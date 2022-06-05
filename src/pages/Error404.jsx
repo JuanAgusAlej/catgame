@@ -7,9 +7,9 @@ import "../style/error.css";
 const Error404 = () => {
   return (
     <div className="error">
-      {/* <Link to="/"> */}
+      <Link to="/">
       <img src={errorimg} alt="Error 404" className="img-Error" />
-      {/* </Link> */}
+      </Link>
     </div>
   );
 };
