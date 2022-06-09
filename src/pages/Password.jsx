@@ -20,7 +20,7 @@ const Password = () => {
       <div className="container container-login">
         <div className="row d-flex align-items-center">
           <div className="col">
-            <h2 className="tittle">Forgot your password?</h2>
+            <h2 className="tittle">forgot your password?</h2>
             <label
               for="exampleInputEmail1"
               className="form-label fst-italic my-3 text-muted"

@@ -42,7 +42,7 @@ const RegScreen = () => {
           Swal.fire({
             icon: "success",
             title: "OK",
-            text: `El usuario ${formValue.nombre} fue creado`,
+            text: `User ${formValue.nombre} created`,
           });
           history("/login");
         }
@@ -57,7 +57,7 @@ const RegScreen = () => {
           <div className="col col-md-6 col-sm-12">
             <form className="d-flex flex-column" onSubmit={handleSubmit}>
               <div className=" mb-3">
-                <h2 className="tittle">Sign up</h2>
+                <h2 className="tittle">join us</h2>
               </div>
               <div className="mb-3">
                 <input
@@ -94,7 +94,7 @@ const RegScreen = () => {
               </div>
               <div className="text-end">
                 <button className="btn my-4" type="submit" disabled={loading}>
-                  sign up
+                  join us
                 </button>
               </div>
             </form>

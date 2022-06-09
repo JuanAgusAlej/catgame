@@ -67,12 +67,10 @@ const LoginSreen = () => {
                 <img src={logo1} alt="logo GamerCat" className="img-login" />
               </div>
               <div className="card-body align-items-center flex-column ">
-                <h2 className="card-title tittle my-3">Log In</h2>
+                <h2 className="card-title tittle my-3">log in</h2>
                 <form onSubmit={handleSubmit}>
                   <div className="form-group mb-3 ">
-                    <label>
-                      <b>Email</b>
-                    </label>
+                    <label>Email</label>
                     <input
                       type="email"
                       className="form-control"
@@ -110,7 +108,7 @@ const LoginSreen = () => {
                       forgot your password?
                     </Link>
                     <Link className="boton-inicio btn" to="/regScreen">
-                      sign up
+                      join us
                     </Link>
                   </div>
                   <div className="text-center py-3">
