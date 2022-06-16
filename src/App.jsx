@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./components/Navbar";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -18,29 +17,31 @@ import RegScreen from "./pages/RegScreen";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 
+import "./style/style.css";
+
 const App = () => {
-	return (
-		<BrowserRouter>
-			<Routes>
-				<Route path="login" element={<LoginScreen />} />
-				<Route
-					path="/"
-					element={
-						<ProtectedRoutes>
-							<Feed />
-						</ProtectedRoutes>
-					}
-				/>
-				<Route path="aboutus" element={<AboutUs />} />
-				<Route path="perfil" element={<Perfil />} />
-				<Route path="admin" element={<Admin />} />
-				<Route path="regScreen" element={<RegScreen />} />
-				<Route path="password" element={<Password />} />
-				<Route path="noticias" element={<News />} />
-				<Route path="*" element={<Error404 />} />
-			</Routes>
-		</BrowserRouter>
-	);
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="login" element={<LoginScreen />} />
+        <Route
+          path="/"
+          element={
+            <ProtectedRoutes>
+              <Feed />
+            </ProtectedRoutes>
+          }
+        />
+        <Route path="aboutus" element={<AboutUs />} />
+        <Route path="profile" element={<Perfil />} />
+        <Route path="admin" element={<Admin />} />
+        <Route path="regScreen" element={<RegScreen />} />
+        <Route path="password" element={<Password />} />
+        <Route path="news" element={<News />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
+    </BrowserRouter>
+  );
 };
 
 export default App;

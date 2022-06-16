@@ -1,5 +1,8 @@
 .container-noticias{
     background-color: white;
+    margin-top: 10px;
+    margin-bottom: 50px; 
+    border-radius: 20px;
 }
 .news-header{
     text-align: center;

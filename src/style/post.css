@@ -51,7 +51,7 @@
 
   .post__footer {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-around !important;
       margin-top: 20px;
       font-size: medium;
     }

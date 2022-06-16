@@ -1,11 +1,37 @@
+.container-aboutus{
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 50px; 
+    border-radius: 20px;
+}
+
+.tittle{
+    text-align: center;
+    color: white;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff3270, 0 0 0.5em #ff3270, 0 0 0.1em #8a2be2, 0 6px 3px #000;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 8px;
+    font-size: 2.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
 .redondo {
-    border-radius: 100px !important
+    border-radius: 35% !important
+}
+.card-us{
+    border:none;
 }
 
 .card-avatar-about {
-    max-width: 200px;
+    width: 300px;
 }
 
 .text-email {
-    font-size: 12px;
+    font-size: 15px;
+}
+
+.bi-linkedin{
+    font-size: 2rem;
 }

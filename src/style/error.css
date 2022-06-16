@@ -1,8 +1,16 @@
-.error{
+.container-error{
     height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: center;
+}
+
+.error{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    
   }
   
   .img-Error{

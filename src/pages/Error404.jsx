@@ -6,10 +6,16 @@ import "../style/error.css";
 
 const Error404 = () => {
   return (
-    <div className="error">
-      {/* <Link to="/"> */}
-      <img src={errorimg} alt="Error 404" className="img-Error" />
-      {/* </Link> */}
+    <div className="container">
+      <div className="row">
+        <div className="col-6 offset-3">
+          <div className="error">
+            <Link to="/">
+              <img src={errorimg} alt="Error 404" className="img-Error" />
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -6,37 +6,34 @@ import { deleteUsuario, getUsuario } from "../helpers/usuario";
 
 import "../style/admin.css";
 const Admin = () => {
-
   const [infoUsuario, setInfoUsuario] = useState({
-		loading: true,
-		datos: [],
-	});
+    loading: true,
+    datos: [],
+  });
 
   useEffect(() => {
-    updateDatos()
-		
+    updateDatos();
   }, []);
   const updateDatos = () => {
     getUsuario().then((respuesta) => {
-			setInfoUsuario({
-				loading: false,
-				datos: respuesta,
-			});
-		});
+      setInfoUsuario({
+        loading: false,
+        datos: respuesta,
+      });
+    });
   };
-  
+
   const borrarUsuario = (uid) => {
-      Swal.fire({
-      title: "Esta seguro?",
-      text: "El usuario será inactivado",
+    Swal.fire({
+      title: "Are you sure?",
+      text: "User will be disabled",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#d33",
-      cancelButtonColor: "#7B7A7A",
-      confirmButtonText: "Si, borrar!",
+      confirmButtonColor: "#FF3270",
+      cancelButtonColor: "#12a696",
+      confirmButtonText: "yeah, do it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        
         deleteUsuario(uid).then((respuesta) => {
           if (respuesta.msg) {
             Swal.fire({
@@ -45,18 +42,17 @@ const Admin = () => {
               text: respuesta.msg,
             });
           } else {
-            Swal.fire("Borrado!", "El usuario ha sido borrado.", "success");
+            Swal.fire("Deleted!", "User disabled", "success");
             updateDatos();
           }
-          
         });
       }
-    })
+    });
   };
   return (
     <div className="container admin-container shadow-lg my-5">
       <div className="row my-3 mt-2">
-        <h2 className="config">Admin: User configuration</h2>
+        <h2 className="tittle">admin: user configuration</h2>
       </div>
 
       <SearchUser />
@@ -66,21 +62,26 @@ const Admin = () => {
           <table className="table table-striped mt-3">
             <thead>
               <tr>
-                <th scope="col">User Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">#Post</th>
-                <th scope="col">Configuration</th>
+                <th scope="col">user name</th>
+                <th scope="col">email</th>
+                <th scope="col">#meows</th>
+                <th scope="col">configuration</th>
               </tr>
             </thead>
             <tbody>
               {infoUsuario.datos.map((usuario) => (
                 <tr key={usuario.uid}>
                   <th scope="row">{usuario.nombre}</th>
-                  <td className="fw-light fs-6 text-center">{usuario.correo}</td>
+                  <td className="fw-light fs-6 text-center">
+                    {usuario.correo}
+                  </td>
                   <td className="fw-light fs-6 text-center">{usuario.email}</td>
                   <td className="delete-btn">
-                    <button className="btn btn-sm ms-3" onClick={() => borrarUsuario(usuario.uid)}>
-                      delete
+                    <button
+                      className="btn btn-sm ms-3"
+                      onClick={() => borrarUsuario(usuario.uid)}
+                    >
+                      disable
                     </button>
                   </td>
                 </tr>

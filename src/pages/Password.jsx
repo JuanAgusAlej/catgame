@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import cat1 from "../img/cat1.png";
+import logo2 from "../img/logo2.png";
 import "../style/stylequerry.css";
+import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Password = () => {
   const [formValue, setFormValue] = useState({
@@ -14,31 +16,45 @@ const Password = () => {
   };
   console.log(formValue);
   return (
-    <div className="container">
-      <div className="rowPass d-flex align-items-center">
-        <div className="col">
-          <h2>¿Olvidaste tu contraseña?</h2>
-          <h3>Ingresa tu Correo para recuperarla</h3>
-          <label for="exampleInputEmail1" className="form-label">
-            Correo electronico asociado a tu cuenta
-          </label>
-          <input
-            type="email"
-            name="email"
-            className="form-control"
-            id="exampleInputEmail1"
-            value={formValue.email}
-            onChange={handleChange}
-          />
-          <button type="submit" className="btnPass btn-primary mt-2">
-            Submit
-          </button>
-        </div>
-        <div className="col">
-          <img src={cat1} className="card-img-top" alt="imagen de noticia" />
+    <>
+      <div className="container container-login">
+        <div className="row d-flex align-items-center">
+          <div className="col">
+            <h2 className="tittle">forgot your password?</h2>
+            <label
+              for="exampleInputEmail1"
+              className="form-label fst-italic my-3 text-muted"
+            >
+              Enter your e-mail to reset your password
+            </label>
+            <input
+              type="email"
+              name="email"
+              required
+              className="form-control"
+              id="exampleInputEmail1"
+              value={formValue.email}
+              onChange={handleChange}
+            />
+            <div className="text-end">
+              <Link to="*">
+                <button type="submit" className="btn my-4">
+                  submit
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="col d-none d-md-block d-sm-none mx-3">
+            <img
+              src={logo2}
+              className="card-img-top my-5 mx-2"
+              alt="GamerCat Logo"
+            />
+          </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 

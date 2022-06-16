@@ -4,10 +4,15 @@ import { Link } from "react-router-dom";
 
 import "../style/post.css";
 
-const Post = ({ displayName, username, text, image, avatar, like, comentario}) => {
-
-  
-
+const Post = ({
+  displayName,
+  username,
+  text,
+  image,
+  avatar,
+  like,
+  comentario,
+}) => {
   return (
     <div className="card post mb-3">
       <div className="row g-0 ">
@@ -21,32 +26,38 @@ const Post = ({ displayName, username, text, image, avatar, like, comentario}) =
             <div className="card-title post__header">
               <h3>
                 <span>{displayName} </span>
-                <span className="post__headerSpecial">
-                   - @{username} 
-                </span>
+                <span className="post__headerSpecial">- @{username}</span>
               </h3>
             </div>
             <div className="post__headerDescription">
-              <p className="card-text">
-                {text}
-              </p>
+              <p className="card-text">{text}</p>
             </div>
             <img
-              //   
+              //
               src={image}
               alt=""
               className="post__img"
             />
             <div className="post__footer">
               {/* </Link> */}
-              <i className="bi bi-heart post__option"> <span className="post__headerSpecial "> {like.length} </span>  </i>
+              <i className="bi bi-heart post__option">
+                {" "}
+                <span className="post__headerSpecial ">
+                  {" "}
+                  {like.length}{" "}
+                </span>{" "}
+              </i>
               {/* <Link to="/Comments" >  tiene que llevar al componente Comments donde el post renderizado sea donde se hizo el click*/}
               <Link to="/comments">
-              <i className="bi bi-chat post__option"><span className="post__headerSpecial "> {comentario.length} </span></i>
+                <i className="bi bi-chat post__option">
+                  <span className="post__headerSpecial ">
+                    {" "}
+                    {comentario.length}{" "}
+                  </span>
+                </i>
               </Link>
               <Link to="/*">
-
-              <i className="bi bi-share post__option"></i>
+                <i className="bi bi-share post__option"></i>
               </Link>
             </div>
           </div>
