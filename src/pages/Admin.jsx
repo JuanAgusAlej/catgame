@@ -25,13 +25,13 @@ const Admin = () => {
 
   const borrarUsuario = (uid) => {
     Swal.fire({
-      title: "Esta seguro?",
-      text: "El usuario será inactivado",
+      title: "Are you sure?",
+      text: "User will be disabled",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#FF3270",
-      cancelButtonColor: "#E7E7E7",
-      confirmButtonText: "yeah, delete it!",
+      cancelButtonColor: "#12a696",
+      confirmButtonText: "yeah, do it!",
     }).then((result) => {
       if (result.isConfirmed) {
         deleteUsuario(uid).then((respuesta) => {
@@ -52,7 +52,7 @@ const Admin = () => {
   return (
     <div className="container admin-container shadow-lg my-5">
       <div className="row my-3 mt-2">
-        <h2 className="config">Admin: User configuration</h2>
+        <h2 className="tittle">admin: user configuration</h2>
       </div>
 
       <SearchUser />
@@ -62,10 +62,10 @@ const Admin = () => {
           <table className="table table-striped mt-3">
             <thead>
               <tr>
-                <th scope="col">User Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">#Meows</th>
-                <th scope="col">Configuration</th>
+                <th scope="col">user name</th>
+                <th scope="col">email</th>
+                <th scope="col">#meows</th>
+                <th scope="col">configuration</th>
               </tr>
             </thead>
             <tbody>
@@ -81,7 +81,7 @@ const Admin = () => {
                       className="btn btn-sm ms-3"
                       onClick={() => borrarUsuario(usuario.uid)}
                     >
-                      delete
+                      disable
                     </button>
                   </td>
                 </tr>

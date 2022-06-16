@@ -69,20 +69,20 @@ const LoginSreen = () => {
               <div className="card-body align-items-center flex-column ">
                 <h2 className="card-title tittle my-3">log in</h2>
                 <form onSubmit={handleSubmit}>
-                  <div className="form-group mb-3 ">
+                  <div className="form-group mb-3">
                     <label>Email</label>
                     <input
                       type="email"
                       className="form-control"
                       name="correo"
+                      autocomplete="off"
+                      required
                       value={formValue.correo}
                       onChange={handleChange}
                     />
                   </div>
                   <div className="form-group mb-3">
-                    <label>
-                      <b>Password</b>
-                    </label>
+                    <label>Password</label>
                     <input
                       type="password"
                       className="form-control"

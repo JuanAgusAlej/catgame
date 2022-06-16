@@ -49,6 +49,10 @@ body{
     color:rgba(255,50,112);
    }
 
+   input:focus {
+    outline-color: rgba(137, 43, 226, 0.171) !important;
+   }
+
    /* .bi{
         cursor: pointer;
         padding: 5px;
@@ -59,3 +63,8 @@ body{
         color:rgba(255,50,112);
         transform: scale(1.3) !important;
       } */
+
+
+
+
+      
